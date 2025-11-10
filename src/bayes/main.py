@@ -5,9 +5,10 @@ import json
 import re
 from typing import List, Tuple, Optional
 import statistics
+from math import sqrt
 import random
 
-def extract_negated_questions(file: str) -> List[Tuple[str, str]]:
+def extract_bayes_questions(file: str) -> List[Tuple[str, str, str, str]]:
     """
     Extrait les paires de questions (affirmative et négative) 
     d'un fichier JSON.
@@ -28,10 +29,12 @@ def extract_negated_questions(file: str) -> List[Tuple[str, str]]:
             for item in data:
                 if 'questions' in item and isinstance(item['questions'], list):
                     question_list = item['questions']
-                    if len(question_list) >= 2:
-                        question = question_list[0]
-                        question_negated = question_list[1]
-                        question_pairs.append((question, question_negated))
+                    if len(question_list) >= 4:
+                        p_a = question_list[0]
+                        p_b = question_list[1]
+                        p_ab = question_list[2]
+                        p_ba = question_list[3]
+                        question_pairs.append((p_a,p_b,p_ab,p_ba))
                     else:
                         print(f"Avertissement : L'élément ne contient pas 2 questions : {item}")
                 else:
@@ -83,28 +86,28 @@ if __name__ == "__main__":
 )
     data = [
         {
-            "file": "../../data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json",
+            "file": "../../data/bayes_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-3.5-turbo",
             "name": "negated_gpt-3.5_T-0.0"
             },
         {
-            "file": "../../data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.5_times_6_mt_400.json",
+            "file": "../../data/bayes_gpt-3.5-turbo-0301_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-3.5-turbo",
             "name": "negated_gpt-3.5_T-0.5"
             },
         {
-            "file": "../../data/negated_pair_dataset_200_gpt-4-0314_method_1shot_china_T_0.0_times_3_mt_400.json",
+            "file": "../../data/bayes_gpt-4-0314_method_1shot_china_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-4",
             "name": "negated_gpt-4_T-0.0"
             },
         {
-            "file": "../../data/negated_pair_dataset_200_gpt-4-0314_method_1shot_china_T_0.5_times_6_mt_400.json",
+            "file": "../../data/bayes_gpt-4-0314_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-4",
@@ -112,40 +115,56 @@ if __name__ == "__main__":
             },
         ]
     for e in data:
-        all_questions: List[Tuple[str,str]] = extract_negated_questions(e["file"])
-        questions = random.sample(all_questions, 66) #cf README.md to understand why we extract 66 questions
+        all_questions: List[Tuple[str,str,str,str]] = extract_bayes_questions(e["file"])
+        questions = random.sample(all_questions, 35) #cf README.md to understand why we extract 66 questions
         all_results_data = []
-        for (q,qn) in questions:
-            value=[]
-            negated=[]
+        for (q1,q2,q3,q4) in questions:
+            v1=[]
+            v2=[]
+            v3=[]
+            v4=[]
             strong=False
-            ans=[]
-            ansn=[]
+            ans1=[]
+            ans2=[]
+            ans3=[]
+            ans4=[]
             for i in range(0,e["run"]):
-                answer = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=q, system_prompt=system_prompt)
-                answer_negated = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=qn, system_prompt=system_prompt)
-                ans.append(answer)
-                ansn.append(answer_negated)
-                r=extract_result(answer=answer)
-                rn=extract_result(answer=answer_negated)
-                if(r is not None): value.append(r)
-                if(rn is not None): negated.append(rn)
-            mn = statistics.median(negated)
-            m = statistics.median(value)
-            vm=abs(m-1+mn)
-            if (vm>0.2): strong=True
-            result_entry = {
-                "questions": [q,qn],
-                "answers": [ans,ansn],
-                "extracted_results": [value,negated],
-                "median": [m,mn],
-                "violation_metric": vm,
-                "strong": strong
-            }
-            all_results_data.append(result_entry)
+                p_a = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=q1, system_prompt=system_prompt)
+                p_b = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=q2, system_prompt=system_prompt)
+                p_ab = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=q3, system_prompt=system_prompt)
+                p_ba = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=q4, system_prompt=system_prompt)
+                ans1.append(p_a)
+                ans2.append(p_b)
+                ans3.append(p_ab)
+                ans4.append(p_ba)
+                r1=extract_result(answer=ans1)
+                r2=extract_result(answer=ans2)
+                r3=extract_result(answer=ans1)
+                r4=extract_result(answer=ans2)
+                if(r1 is not None): v1.append(r1)
+                if(r2 is not None): v2.append(r2)
+                if(r3 is not None): v3.append(r1)
+                if(r4 is not None): v4.append(r2)
+            
+            if(len(v1)>0 & len(v2)>0 & len(v3)>0 & len(v4)>0):
+                ma = statistics.median(v1)
+                mb = statistics.median(v2)
+                mab = statistics.median(v3)
+                mba = statistics.median(v4)
+                vm=sqrt(abs(mab*mb-mba*ma))
+                if (vm>0.2): strong=True
+                result_entry = {
+                    "questions": [q1,q2,q3,q4],
+                    "answers": [ans1,ans2,ans3,ans4],
+                    "extracted_results": [v1,v2,v3,v4],
+                    "median": [ma,mb,mab,mba],
+                    "violation_metric": vm,
+                    "strong": strong
+                }
+                all_results_data.append(result_entry)
 
         try: 
-            with open(f'../../results/negated_pairs/output_{e["name"]}.json', 'w', encoding='utf-8') as f:
+            with open(f'../../results/bayes/output_{e["name"]}.json', 'w', encoding='utf-8') as f:
                 json.dump(all_results_data, f, indent=4, ensure_ascii=False)
         except IOError as e:
             print(f"Erreur lors de l'écriture dans le fichier JSON : {e}")

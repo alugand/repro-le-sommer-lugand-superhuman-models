@@ -130,19 +130,21 @@ if __name__ == "__main__":
                 rn=extract_result(answer=answer_negated)
                 if(r is not None): value.append(r)
                 if(rn is not None): negated.append(rn)
-            mn = statistics.median(negated)
-            m = statistics.median(value)
-            vm=abs(m-1+mn)
-            if (vm>0.2): strong=True
-            result_entry = {
-                "questions": [q,qn],
-                "answers": [ans,ansn],
-                "extracted_results": [value,negated],
-                "median": [m,mn],
-                "violation_metric": vm,
-                "strong": strong
-            }
-            all_results_data.append(result_entry)
+                
+            if(len(value)>0 & len(negated)>0):
+                mn = statistics.median(negated)
+                m = statistics.median(value)
+                vm=abs(m-1+mn)
+                if (vm>0.2): strong=True
+                result_entry = {
+                    "questions": [q,qn],
+                    "answers": [ans,ansn],
+                    "extracted_results": [value,negated],
+                    "median": [m,mn],
+                    "violation_metric": vm,
+                    "strong": strong
+                }
+                all_results_data.append(result_entry)
 
         try: 
             with open(f'../../results/negated_pairs/output_{e["name"]}.json', 'w', encoding='utf-8') as f:
