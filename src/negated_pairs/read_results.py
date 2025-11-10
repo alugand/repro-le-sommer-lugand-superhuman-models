@@ -45,7 +45,6 @@ def calculate_statistics(file_path: str):
 
 if __name__ == "__main__":
 
-    script_dir = os.path.dirname(__file__) 
-    file_to_analyze = os.path.join(script_dir, '../results/output.json')
-    
-    calculate_statistics(file_to_analyze)
+    files = ["negated_gpt-3.5_T-0.0","negated_gpt-3.5_T-0.5","negated_gpt-4_T-0.0","negated_gpt-4_T-0.5"]
+    for f in files:
+        calculate_statistics(f"../../results/negated_pairs/output_{f}.json")
