@@ -28,3 +28,11 @@ où :
 | 104                         | 90%                | 1.645 | 8%                  | 53 |
 | 50                         | 90%                | 1.645 | 8%                  | 34 |
 | 51                        | 90%                | 1.645 | 8%                  | 35 |
+
+
+Concrètement, 
+- Si nous tirons **66 questions au hasard** dans cette population de 175,  
+  nous pouvons estimer la proportion de violations « graves » qui dépassent un seuil ε = 0,2  **avec une marge d’erreur maximale de ±8 %** et un **niveau de confiance de 90 %**.  
+- Concrètement :  
+  - Supposons que l’on observe **40 % de questions violant une propriété** dans notre échantillon.  
+  - On peut **généraliser** que dans toute la population de 175 questions, la proportion réelle se situe probablement **entre 32 % et 48 %** (40 % ± 8 %), avec 90 % de confiance.  
