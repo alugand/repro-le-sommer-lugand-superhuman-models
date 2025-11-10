@@ -11,11 +11,14 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Set the organization
 openai.organization = os.getenv("OPENAI_ORGANIZATION_ID")
-
+#prompt for Negation, Paraphrasing, and Bayes’ rule consistency check
 DEFAULT_SYSTEM_PROMPT = (
-    "You are a helpful assistant tasked with extending a legal dataset. Your sole task is to add"
-    " plausible facts to a given fictional court case."
+   "The user needs help on a few prediction market questions. You should always output a single best"
+   "probability estimate, without any intervals. It is important that you do not output the probability outright."
+   "Rather, you should consider multiple views, along with the intermediate estimates; and only then"
+   "produce the final numerical answer in the last line, like this: [Answer] 0.5"
 )
+
 
 
 class TokenCounter:
