@@ -83,28 +83,28 @@ def negated_pairs():
 )
     data = [
         {
-            "file": "../../data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json",
+            "file": "data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-3.5-turbo",
             "name": "negated_gpt-3.5_T-0.0"
             },
         {
-            "file": "../../data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.5_times_6_mt_400.json",
+            "file": "data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-3.5-turbo",
             "name": "negated_gpt-3.5_T-0.5"
             },
         {
-            "file": "../../data/negated_pair_dataset_200_gpt-4-0314_method_1shot_china_T_0.0_times_3_mt_400.json",
+            "file": "data/negated_pair_dataset_200_gpt-4-0314_method_1shot_china_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-4",
             "name": "negated_gpt-4_T-0.0"
             },
         {
-            "file": "../../data/negated_pair_dataset_200_gpt-4-0314_method_1shot_china_T_0.5_times_6_mt_400.json",
+            "file": "data/negated_pair_dataset_200_gpt-4-0314_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-4",
@@ -148,7 +148,7 @@ def negated_pairs():
                 all_results_data.append(result_entry)
 
         try: 
-            with open(f'../../reproducibility/results/negated_pairs/output_{e["name"]}.json', 'w', encoding='utf-8') as f:
+            with open(f'reproducibility/results/negated_pairs/output_{e["name"]}.json', 'w', encoding='utf-8') as f:
                 json.dump(all_results_data, f, indent=4, ensure_ascii=False)
         except IOError as e:
             print(f"Erreur lors de l'écriture dans le fichier JSON : {e}")

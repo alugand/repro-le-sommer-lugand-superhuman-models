@@ -2,11 +2,9 @@ import sys
 import os
 sys.path.append("..") 
 from gpt_interface import gpt_query
-import random
-import time
 import json
 import re
-from typing import List, Tuple, Optional, Dict, Any
+from typing import List, Dict, Any
 import statistics
 
 def extract_paraphrase_questions(file: str) -> List[List[str]]:
@@ -85,28 +83,28 @@ if __name__ == "__main__":
 
     data = [
         {
-            "file": "../../data/large_paraphrases_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json",
+            "file": "data/large_paraphrases_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-3.5-turbo",
             "name": "paraphrase_gpt-3.5_T-0.0"
             },
         {
-            "file": "../../data/large_paraphrases_gpt-3.5-turbo-0301_method_1shot_china_T_0.5_times_6_mt_400.json",
+            "file": "data/large_paraphrases_gpt-3.5-turbo-0301_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-3.5-turbo",
             "name": "paraphrase_gpt-3.5_T-0.5"
             },
         {
-            "file": "../../data/large_paraphrases_gpt-4-0314_method_1shot_china_T_0.0_times_3_mt_400.json",
+            "file": "data/large_paraphrases_gpt-4-0314_method_1shot_china_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-4",
             "name": "paraphrase_gpt-4_T-0.0"
             },
         {
-            "file": "../../data/large_paraphrases_gpt-4-0314_method_1shot_china_T_0.5_times_6_mt_400.json",
+            "file": "data/large_paraphrases_gpt-4-0314_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-4",
@@ -114,7 +112,7 @@ if __name__ == "__main__":
             },
         ]
         
-    output_dir = "../../reproducibility/results/paraphrases"
+    output_dir = "reproducibility/results/paraphrases"
     
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
