@@ -169,7 +169,7 @@ def bayes():
                 all_results_data.append(result_entry)
 
         try: 
-            with open(f'../../results/bayes/output_{e["name"]}.json', 'w', encoding='utf-8') as f:
+            with open(f'../../reproducibility/results/bayes/output_{e["name"]}.json', 'w', encoding='utf-8') as f:
                 json.dump(all_results_data, f, indent=4, ensure_ascii=False)
         except IOError as e:
             print(f"Erreur lors de l'écriture dans le fichier JSON : {e}")

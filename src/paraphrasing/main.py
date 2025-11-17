@@ -114,7 +114,7 @@ if __name__ == "__main__":
             },
         ]
         
-    output_dir = "../../results/paraphrases"
+    output_dir = "../../reproducibility/results/paraphrases"
     
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)

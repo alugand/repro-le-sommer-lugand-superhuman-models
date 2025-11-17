@@ -55,7 +55,7 @@ Exécuter ces commandes à la racine du projet :
 ```bash
 docker build -t repro -f reproducibility/Dockerfile .
 docker run --rm \
-  -v "$(pwd)/results":/results \
+  -v "$(pwd)/reproducibility/results":/reproducibility/results \
   -v "$(pwd)/data":/data:ro \
   repro
 ```

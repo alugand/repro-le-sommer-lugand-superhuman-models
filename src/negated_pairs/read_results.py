@@ -47,4 +47,4 @@ if __name__ == "__main__":
 
     files = ["negated_gpt-3.5_T-0.0","negated_gpt-3.5_T-0.5","negated_gpt-4_T-0.0","negated_gpt-4_T-0.5"]
     for f in files:
-        calculate_statistics(f"../../results/negated_pairs/output_{f}.json")
+        calculate_statistics(f"../../reproducibility/results/negated_pairs/output_{f}.json")
