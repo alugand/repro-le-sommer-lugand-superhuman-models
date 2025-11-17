@@ -1,11 +1,10 @@
 FROM python:3.10-bookworm
 
-COPY requirements.txt .
+COPY reproducibility/requirements.txt .
 
-COPY ../src .
+COPY src .
 
-RUN mkdir -p /results/negated_pairs
-RUN mkdir -p /results/bayes
+RUN mkdir -p /results
 
 RUN pip install --no-cache-dir -r requirements.txt
 

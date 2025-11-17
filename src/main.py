@@ -3,5 +3,5 @@ from bayes.main import bayes
 
 
 if __name__=="main":
-    negated_pairs()
+    #negated_pairs()
     bayes()

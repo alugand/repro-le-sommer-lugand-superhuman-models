@@ -118,9 +118,12 @@ def bayes():
         ]
     for e in data:
         all_questions: List[Tuple[str,str,str,str]] = extract_bayes_questions(e["file"])
-        questions = random.sample(all_questions, 35) #cf README.md to understand why we extract 66 questions
+        questions = random.sample(all_questions, 2) #cf README.md to understand why we extract 66 questions
+        i=0
         all_results_data = []
         for (q1,q2,q3,q4) in questions:
+            print(i)
+            i+=1
             v1=[]
             v2=[]
             v3=[]

@@ -36,3 +36,26 @@ Concrètement,
 - Concrètement :  
   - Supposons que l’on observe **40 % de questions violant une propriété** dans notre échantillon.  
   - On peut **généraliser** que dans toute la population de 175 questions, la proportion réelle se situe probablement **entre 32 % et 48 %** (40 % ± 8 %), avec 90 % de confiance.  
+
+## Reproductibilité
+
+### Requirements
+
+Créer un fichier .env dans le dossier src/ et ajoutez-y les informations suivantes :
+
+```python
+OPENAI_API_KEY="VOTRE_API_KEY"
+OPENAI_API_BASE="URL_OPENROUTER" #par exemple https://openrouter.ai/api/v1
+```
+
+### Créer l'environnement
+
+Exécuter ces commandes à la racine du projet :
+
+```bash
+docker build -t repro -f reproducibility/Dockerfile .
+docker run --rm \
+  -v "$(pwd)/results":/results \
+  -v "$(pwd)/data":/data:ro \
+  repro
+```
