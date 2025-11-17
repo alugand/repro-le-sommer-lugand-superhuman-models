@@ -91,31 +91,30 @@ def monotonicity():
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-3.5-turbo",
-            "name": "negated_gpt-3.5_T-0.0"
+            "name": "monotonic_sequence_gpt-3.5_T-0.0"
             },
         {
             "file": "../data/monotonic_sequence_gpt-3.5-turbo-0301_method_1shot_climbers_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-3.5-turbo",
-            "name": "negated_gpt-3.5_T-0.5"
+            "name": "monotonic_sequence_gpt-3.5_T-0.5"
             },
         {
             "file": "data/monotonic_sequence_gpt-4-0314_method_1shot_climbers_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-4",
-            "name": "negated_gpt-4_T-0.0"
+            "name": "monotonic_sequence_gpt-4_T-0.0"
             },
         {
             "file": "data/monotonic_sequence_gpt-4-0314_method_1shot_climbers_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-4",
-            "name": "negated_gpt-4_T-0.5"
+            "name": "monotonic_sequence_gpt-4_T-0.5"
             },
         ]
-    print(sys.path)
     for e in data:
         all_questions: List[Tuple[str,str,str,str,str,str]] = extract_monotonic_questions(e["file"])
                 

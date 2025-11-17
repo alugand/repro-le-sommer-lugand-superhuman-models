@@ -8,7 +8,7 @@ from openai import OpenAI, APIError, RateLimitError  # Imports spécifiques
 
 load_dotenv()
 client = OpenAI(
-  base_url="https://openrouter.ai/api/v1",
+  base_url=os.getenv("OPENAI_API_BASE"),
   api_key=os.getenv("OPENAI_API_KEY"),
 )
 

@@ -92,28 +92,28 @@ def bayes():
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-3.5-turbo",
-            "name": "negated_gpt-3.5_T-0.0"
+            "name": "bayes_gpt-3.5_T-0.0"
             },
         {
             "file": "data/bayes_gpt-3.5-turbo-0301_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-3.5-turbo",
-            "name": "negated_gpt-3.5_T-0.5"
+            "name": "bayes_gpt_gpt-3.5_T-0.5"
             },
         {
             "file": "data/bayes_gpt-4-0314_method_1shot_china_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-4",
-            "name": "negated_gpt-4_T-0.0"
+            "name": "bayes_gpt_gpt-4_T-0.0"
             },
         {
             "file": "data/bayes_gpt-4-0314_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-4",
-            "name": "negated_gpt-4_T-0.5"
+            "name": "bayes_gpt_gpt-4_T-0.5"
             },
         ]
     for e in data:
@@ -142,10 +142,10 @@ def bayes():
                 ans2.append(p_b)
                 ans3.append(p_ab)
                 ans4.append(p_ba)
-                r1=extract_result(answer=ans1)
-                r2=extract_result(answer=ans2)
-                r3=extract_result(answer=ans1)
-                r4=extract_result(answer=ans2)
+                r1=extract_result(answer=p_a)
+                r2=extract_result(answer=p_b)
+                r3=extract_result(answer=p_ab)
+                r4=extract_result(answer=p_ba)
                 if(r1 is not None): v1.append(r1)
                 if(r2 is not None): v2.append(r2)
                 if(r3 is not None): v3.append(r1)
