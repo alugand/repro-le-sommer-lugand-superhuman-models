@@ -2,7 +2,6 @@ import sys
 sys.path.append("..")
 from gpt_interface import gpt_query
 import json
-import re
 from typing import List, Tuple, Optional
 import statistics
 import random
@@ -68,12 +67,13 @@ def extract_result(answer: str) -> Optional[float]:
         return None
     result_str = parts[-1]
     result_str = result_str.strip()
+    result_str = result_str.rstrip('.')
     try:
         return float(result_str)
     except ValueError:
         return None
 
-if __name__ == "__main__":
+def negated_pairs():
 
     system_prompt = (
    "The user needs help on a few prediction market questions. You should always output a single best"
@@ -111,10 +111,11 @@ if __name__ == "__main__":
             "name": "negated_gpt-4_T-0.5"
             },
         ]
+    
     for e in data:
+        all_results_data = []
         all_questions: List[Tuple[str,str]] = extract_negated_questions(e["file"])
         questions = random.sample(all_questions, 66) #cf README.md to understand why we extract 66 questions
-        all_results_data = []
         for (q,qn) in questions:
             value=[]
             negated=[]
@@ -131,7 +132,7 @@ if __name__ == "__main__":
                 if(r is not None): value.append(r)
                 if(rn is not None): negated.append(rn)
                 
-            if(len(value)>0 & len(negated)>0):
+            if(len(value)>0 and len(negated)>0):
                 mn = statistics.median(negated)
                 m = statistics.median(value)
                 vm=abs(m-1+mn)

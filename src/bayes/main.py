@@ -71,12 +71,14 @@ def extract_result(answer: str) -> Optional[float]:
         return None
     result_str = parts[-1]
     result_str = result_str.strip()
+    result_str = result_str.strip('.')
+
     try:
         return float(result_str)
     except ValueError:
         return None
 
-if __name__ == "__main__":
+def bayes():
 
     system_prompt = (
    "The user needs help on a few prediction market questions. You should always output a single best"
@@ -146,7 +148,7 @@ if __name__ == "__main__":
                 if(r3 is not None): v3.append(r1)
                 if(r4 is not None): v4.append(r2)
             
-            if(len(v1)>0 & len(v2)>0 & len(v3)>0 & len(v4)>0):
+            if(len(v1)>0 and len(v2)>0 and len(v3)>0 and len(v4)>0):
                 ma = statistics.median(v1)
                 mb = statistics.median(v2)
                 mab = statistics.median(v3)
