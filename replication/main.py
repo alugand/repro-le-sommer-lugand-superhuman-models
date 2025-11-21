@@ -4,26 +4,36 @@ import json
 import statistics
 import argparse
 from typing import List, Tuple, Dict, Any, Optional
+from gpt_interface import gpt_query
+from negated_pairs.main import extract_negated_questions
+from bayes.main import extract_bayes_questions
 
-
-# --- STUBS (À REMPLACER PAR VOTRE VRAIE LOGIQUE D'API) ---
-def gpt_query(model_name: str, temperature: float, prompt: str, system_prompt: str) -> str:
-    """Simule une requête à l'API LLM (À remplacer)."""
-    print(f"  [API] Querying {model_name} (T={temperature}) for: {prompt[:40]}...")
-    # Simuler une réponse de probabilité de 0.5 (pour démonstration)
-    if "No" in prompt or "not" in prompt:
-        return "[Answer] 0.10"
-    return "[Answer] 0.90"
-
+import random
 def extract_result(answer: str) -> Optional[float]:
-    """Extrait le résultat numérique de la réponse du LLM (À remplacer)."""
-    # Simuler l'extraction à partir de "[Answer] X.XX"
+    """
+    Extrait le nombre (float ou int) qui suit la balise "[Answer]"
+    dans une chaîne de caractères.
+
+    Args:
+        answer: La chaîne de caractères d'entrée contenant la réponse
+                et la balise [Answer].
+
+    Returns:
+        Le nombre extrait sous forme de float, ou None si la balise
+        n'est pas trouvée ou si le nombre n'est pas valide.
+    """
+    parts = answer.rsplit("[Answer]", 1)
+    
+    if len(parts) < 2:
+        return None
+    result_str = parts[-1]
+    result_str = result_str.strip()
+    result_str = result_str.strip('.')
+
     try:
-        if "[Answer]" in answer:
-            return float(answer.split("[Answer]")[1].strip())
+        return float(result_str)
     except ValueError:
         return None
-    return None
 # --------------------------------------------------------
 
 # --- LOGIQUE D'EXPÉRIMENTATION ---
@@ -58,7 +68,7 @@ def run_negated_pair_experiment(
         if len(value) > 0 and len(negated) > 0:
             m = statistics.median(value)
             mn = statistics.median(negated)
-            vm = abs(m - 1 + mn) # |P(E) + P(~E) - 1|
+            vm = abs(m - 1 + mn)
             if vm > 0.2: strong = True
         
         result_entry = {
@@ -72,6 +82,68 @@ def run_negated_pair_experiment(
         
     return all_results_data
 
+def run_bayes_experiment(
+    questions,
+    model_name: str,
+    temperature: float,
+    times: int = 3,
+    system_prompt: str = "Always output a single best numerical estimate for the requested probability, preceded by [Answer] followed by a space (e.g., [Answer] 0.50).",
+):
+        all_results_data = []
+        for (q1,q2,q3,q4) in questions:
+            print(k)
+            k+=1
+            v1=[]
+            v2=[]
+            v3=[]
+            v4=[]
+            strong=False
+            ans1=[]
+            ans2=[]
+            ans3=[]
+            ans4=[]
+            for i in range(0,times):
+                p_a = gpt_query(model_name=model_name, temperature=temperature, prompt=q1, system_prompt=system_prompt)
+                p_b = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=q2, system_prompt=system_prompt)
+                p_ab = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=q3, system_prompt=system_prompt)
+                p_ba = gpt_query(model_name=e["model"], temperature=e["temperature"], prompt=q4, system_prompt=system_prompt)
+                ans1.append(p_a)
+                ans2.append(p_b)
+                ans3.append(p_ab)
+                ans4.append(p_ba)
+                r1=extract_result(answer=p_a)
+                r2=extract_result(answer=p_b)
+                r3=extract_result(answer=p_ab)
+                r4=extract_result(answer=p_ba)
+                if(r1 is not None): v1.append(r1)
+                if(r2 is not None): v2.append(r2)
+                if(r3 is not None): v3.append(r1)
+                if(r4 is not None): v4.append(r2)
+            
+            if(len(v1)>0 and len(v2)>0 and len(v3)>0 and len(v4)>0):
+                ma = statistics.median(v1)
+                mb = statistics.median(v2)
+                mab = statistics.median(v3)
+                mba = statistics.median(v4)
+                vm=sqrt(abs(mab*mb-mba*ma))
+                if (vm>0.2): strong=True
+                result_entry = {
+                    "questions": [q1,q2,q3,q4],
+                    "answers": [ans1,ans2,ans3,ans4],
+                    "extracted_results": [v1,v2,v3,v4],
+                    "median": [ma,mb,mab,mba],
+                    "violation_metric": vm,
+                    "strong": strong
+                }
+                all_results_data.append(result_entry)
+
+        try: 
+            with open(f'reproducibility/results/bayes/output_{e["name"]}.json', 'w', encoding='utf-8') as f:
+                json.dump(all_results_data, f, indent=4, ensure_ascii=False)
+        except IOError as e:
+            print(f"Erreur lors de l'écriture dans le fichier JSON : {e}")
+        except Exception as e:
+            print(f"Une erreur inattendue est survenue lors de l'écriture du JSON : {e}")    
 def run_paraphrase_experiment(
     question_groups: List[List[str]],
     model_name: str,
@@ -141,7 +213,7 @@ def main():
     parser = argparse.ArgumentParser(description="Exécuter des expériences de vérification de cohérence LLM avec des arguments CLI.")
     
     parser.add_argument("--type", 
-                        choices=["negated_pair", "paraphrase"],
+                        choices=["negated_pair", "paraphrase", "monotonic", "bayes"],
                         required=True, 
                         help="Le type de vérification de cohérence à exécuter.")
     
@@ -181,7 +253,13 @@ def main():
 
     # Dispatcher l'exécution en fonction du type
     if args.type == "negated_pair":
-        results = run_negated_pair_experiment(data_to_run, args.model, args.temperature)
+        all_questions: List[Tuple[str,str]] = extract_negated_questions("data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json")
+        questions = random.sample(all_questions, 66)
+        results = run_negated_pair_experiment(questions, args.model, args.temperature)
+    elif args.type == "bayes":
+        all_questions = extract_bayes_questions("data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json")
+        questions = random.sample(all_questions, 3)
+        results = run_bayes_experiment(questions, args.model, args.temperature)
     elif args.type == "paraphrase":
         results = run_paraphrase_experiment(data_to_run, args.model, args.temperature)
     

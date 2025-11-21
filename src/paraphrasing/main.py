@@ -6,6 +6,7 @@ import json
 import re
 from typing import List, Dict, Any
 import statistics
+import random
 
 def extract_paraphrase_questions(file: str) -> List[List[str]]:
     """
@@ -54,25 +55,25 @@ def extract_result(answer: str) -> Dict[str, Any]:
                 et la balise [Answer].
 
     Returns:
-        Un dictionnaire {"parsed": bool, "result": Optional[float]}.
+        Optional[float]
     """
     parts = answer.rsplit("[Answer]", 1)
     
     if len(parts) < 2:
-        return {"parsed": False, "result": None}
+        return None
         
     result_str = parts[-1].strip()
     match = re.search(r"^[0-9\.]+", result_str)
     
     if match:
         try:
-            return {"parsed": True, "result": float(match.group(0))}
+            return float(match.group(0))
         except ValueError:
-            return {"parsed": False, "result": None}
+            return None
     else:
-        return {"parsed": False, "result": None}
+        return None
 
-if __name__ == "__main__":
+def paraphrasing():
 
     system_prompt = (
    "The user needs help on a few prediction market questions. You should always output a single best"
@@ -110,6 +111,7 @@ if __name__ == "__main__":
             "model": "gpt-4",
             "name": "paraphrase_gpt-4_T-0.5"
             },
+
         ]
         
     output_dir = "reproducibility/results/paraphrases"
@@ -118,15 +120,14 @@ if __name__ == "__main__":
         os.makedirs(output_dir)
 
     for e in data:
-        print(f"--- Démarrage de l'expérience : {e['name']} ---")
         all_question_groups: List[List[str]] = extract_paraphrase_questions(e["file"])
-        
-        questions = all_question_groups
-        print(f"Trouvé {len(questions)} groupes de questions.")
-        
+        questions = random.sample(all_question_groups, 5)
+
         all_results_data = []
-        
+        k=0
         for question_group in questions:
+            print(k)
+            k+=1
             all_raw_answers_group = []
             all_parsed_answers_group = []
             medians_group = []
@@ -144,8 +145,8 @@ if __name__ == "__main__":
                     raw_ans_for_q.append(raw_answer)
                     parsed_ans_for_q.append(parsed_answer)
                     
-                    if parsed_answer["parsed"]:
-                        valid_results_for_q.append(parsed_answer["result"])
+                    if parsed_answer is not None:
+                        valid_results_for_q.append(parsed_answer)
                 
                 all_raw_answers_group.append(raw_ans_for_q)
                 all_parsed_answers_group.append(parsed_ans_for_q)
@@ -169,22 +170,17 @@ if __name__ == "__main__":
 
             result_entry = {
                 "questions": question_group,
-                "responses": all_raw_answers_group,
-                "answers": all_parsed_answers_group,
-                "type": "paraphrase",
+                "answers": all_raw_answers_group,
+                "extracted_results": all_parsed_answers_group,
                 "violation_metric": vm,
                 "median": medians_group,
-                "std_devs": std_devs_group,
                 "strong": strong
             }
             all_results_data.append(result_entry)
-            print(f"Groupe traité. Médianes : {medians_group}, Violation : {vm:.4f}")
-
         try: 
             output_path = os.path.join(output_dir, f"output_{e['name']}.json")
-            with open(output_path, 'a', encoding='utf-8') as f:
+            with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(all_results_data, f, indent=4, ensure_ascii=False)
-            print(f"--- Expérience {e['name']} terminée. Résultats sauvegardés dans {output_path} ---")
         except IOError as ioe:
             print(f"Erreur lors de l'écriture dans le fichier JSON : {ioe}")
         except Exception as ex:

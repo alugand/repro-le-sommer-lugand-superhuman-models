@@ -99,26 +99,26 @@ def bayes():
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-3.5-turbo",
-            "name": "bayes_gpt_gpt-3.5_T-0.5"
+            "name": "bayes_gpt-3.5_T-0.5"
             },
         {
             "file": "data/bayes_gpt-4-0314_method_1shot_china_T_0.0_times_3_mt_400.json",
             "temperature": 0.0,
             "run": 3,
             "model": "gpt-4",
-            "name": "bayes_gpt_gpt-4_T-0.0"
+            "name": "bayes_gpt-4_T-0.0"
             },
         {
             "file": "data/bayes_gpt-4-0314_method_1shot_china_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-4",
-            "name": "bayes_gpt_gpt-4_T-0.5"
+            "name": "bayes_gpt-4_T-0.5"
             },
         ]
     for e in data:
         all_questions: List[Tuple[str,str,str,str]] = extract_bayes_questions(e["file"])
-        questions = random.sample(all_questions, 2) #cf README.md to understand why we extract 66 questions
+        questions = random.sample(all_questions, 5) #cf README.md to understand why we extract 66 questions
         k=0
         all_results_data = []
         for (q1,q2,q3,q4) in questions:
@@ -148,8 +148,8 @@ def bayes():
                 r4=extract_result(answer=p_ba)
                 if(r1 is not None): v1.append(r1)
                 if(r2 is not None): v2.append(r2)
-                if(r3 is not None): v3.append(r1)
-                if(r4 is not None): v4.append(r2)
+                if(r3 is not None): v3.append(r3)
+                if(r4 is not None): v4.append(r4)
             
             if(len(v1)>0 and len(v2)>0 and len(v3)>0 and len(v4)>0):
                 ma = statistics.median(v1)

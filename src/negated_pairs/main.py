@@ -115,7 +115,7 @@ def negated_pairs():
     for e in data:
         all_results_data = []
         all_questions: List[Tuple[str,str]] = extract_negated_questions(e["file"])
-        questions = random.sample(all_questions, 66) #cf README.md to understand why we extract 66 questions
+        questions = random.sample(all_questions, 5) #cf README.md to understand why we extract 66 questions
         for (q,qn) in questions:
             value=[]
             negated=[]

@@ -80,10 +80,10 @@ def extract_result(answer: str) -> Optional[float]:
 def monotonicity():
 
     system_prompt = (
-   "The user needs help on a few prediction market questions. You should always output a single best"
-   "probability estimate, without any intervals. It is important that you do not output the probability outright."
-   "Rather, you should consider multiple views, along with the intermediate estimates; and only then"
-   "produce the final numerical answer in the last line, like this: [Answer] 0.5"
+"The user needs help on a few prediction market questions. You should always output a single best"
+"numerical estimate, without any intervals. It is important you do not output the answer outright. Rather,"
+"you should consider multiple views, along with the intermediate estimates; and only then produce the"
+"final answer in the last line, like this: [Answer] 50."
 )
     data = [
         {
@@ -94,7 +94,7 @@ def monotonicity():
             "name": "monotonic_sequence_gpt-3.5_T-0.0"
             },
         {
-            "file": "../data/monotonic_sequence_gpt-3.5-turbo-0301_method_1shot_climbers_T_0.5_times_6_mt_400.json",
+            "file": "data/monotonic_sequence_gpt-3.5-turbo-0301_method_1shot_climbers_T_0.5_times_6_mt_400.json",
             "temperature": 0.5,
             "run": 6,
             "model": "gpt-3.5-turbo",
@@ -118,7 +118,7 @@ def monotonicity():
     for e in data:
         all_questions: List[Tuple[str,str,str,str,str,str]] = extract_monotonic_questions(e["file"])
                 
-        questions = random.sample(all_questions, 1)
+        questions = random.sample(all_questions, 5)
         k=0
         all_results_data = []
         
@@ -171,9 +171,9 @@ def monotonicity():
 
                 predictions = [m1, m2, m3, m4, m5]
                 if d == 'increasing':
-                    expected_ranks = [1, 2, 3, 4, 5]
+                    expected_ranks = [2025, 2028, 2032, 2036, 2040]
                 elif d == 'decreasing':
-                    expected_ranks = [5, 4, 3, 2, 1]
+                    expected_ranks = [2040, 2036, 2032, 2028, 2025]
                 else:
                     print(f"Avertissement : Direction '{d}' non reconnue, saut.")
                     vm = None
