@@ -44,19 +44,36 @@ Concrètement,
   - Supposons que l’on observe **40 % de questions violant une propriété** dans notre échantillon.  
   - On peut **généraliser** que dans toute la population de 175 questions, la proportion réelle se situe probablement **entre 32 % et 48 %** (40 % ± 8 %), avec 90 % de confiance.  
 
-## Reproductibilité
+## Requirements pour reproduire l'environnement
 
-### Requirements
+Ne suivez pas ces étapes si vous souhaitez simplement reproduire les expériences via un container Docker.
 
-Créer un fichier .env à la racine du projet et ajoutez-y les informations suivantes :
+1. Exécuter ces commandes à la racine du projet :
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+2. Créer un fichier .env à la racine du projet et ajoutez-y les informations suivantes :
 
 ```python
 OPENAI_API_KEY="VOTRE_API_KEY"
 OPENAI_API_BASE="URL_OPENROUTER" #par exemple https://openrouter.ai/api/v1
 ```
 
-### Créer l'environnement et reproduire les expériences
+## Reproductibilité
 
+### Reproduire les expériences
+
+* SI vous souhaitez lancer les expériences manuellement (après avoir effectué l'étape de la section Requirements). Par défault, le fichier main.py du dossier src/ lance chaque expérience (negated_pairs, bayes, ...). Si vous souhaitez n'en lancer qu'une seule, commenter la/les lignes désirées puis éxecuter cette commande à la racine du projet:
+
+```bash
+python3 src/main.py
+```
+
+* SI vous souhaitez utiliser un container Docker :
 Exécuter ces commandes à la racine du projet :
 
 ```bash

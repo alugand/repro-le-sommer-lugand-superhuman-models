@@ -1,8 +1,5 @@
-import sys
-sys.path.append("..")
-from gpt_interface import gpt_query
+from src.gpt_interface import gpt_query
 import json
-import re
 from typing import List, Tuple, Optional
 import statistics
 from math import sqrt

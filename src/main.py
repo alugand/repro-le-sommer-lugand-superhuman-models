@@ -1,7 +1,7 @@
-from negated_pairs.main import negated_pairs
-from bayes.main import bayes
-from monotonicity.main import monotonicity
-from paraphrasing.main import paraphrasing
+from src.negated_pairs.main import negated_pairs
+from src.bayes.main import bayes
+from src.monotonicity.main import monotonicity
+from src.paraphrasing.main import paraphrasing
 
 if __name__=="__main__":
     print("début des expériences de reproductibilité")

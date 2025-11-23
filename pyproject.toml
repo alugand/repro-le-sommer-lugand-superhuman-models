@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repro-le-sommer-lugand-superhuman-models"  # Vous pouvez changer ce nom
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "datasets==2.10.1",
+    "evaluate==0.4.0",
+    "highlight-text==0.2",
+    "matplotlib==3.7.1",
+    "openai==2.7.1",
+    "scikit-learn==1.2.2",
+    "tiktoken==0.3.3",
+    "torch==2.0.0",
+    "transformers==4.26.1",
+    "wandb==0.14.0",
+    "python-dotenv",
+    "ipykernel",
+    "scipy"
+]
+
+[tool.setuptools.packages.find]
+# Cela permet à setuptools de trouver automatiquement le dossier "src"
+where = ["."]
+include = ["src*"]

@@ -1,12 +1,12 @@
 FROM python:3.10-bookworm
 
-COPY reproducibility/requirements.txt .
+COPY pyproject.toml .
 
 COPY src src
 
 RUN mkdir -p /reproducibility
 RUN mkdir -p /reproducibility/results
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -e .
 
 CMD [ "python", "./src/main.py" ]

@@ -1,6 +1,4 @@
-import sys
-sys.path.append("..")
-from gpt_interface import gpt_query
+from src.gpt_interface import gpt_query
 import json
 from typing import List, Tuple, Optional
 import statistics
