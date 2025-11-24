@@ -49,7 +49,7 @@ def run_negated_pair_experiment(
     questions: List[Tuple[str, str]],
     model_name: str,
     temperature: float,
-    times: int = 6,
+    times: int = 3,
     system_prompt: str = "The user needs help on a few prediction market questions. You should always output a single best"
    "probability estimate, without any intervals. It is important that you do not output the probability outright."
    "Rather, you should consider multiple views, along with the intermediate estimates; and only then"
@@ -58,8 +58,10 @@ def run_negated_pair_experiment(
     """Exécute l'expérience Paire Négative pour toutes les paires de questions."""
     
     all_results_data = []
-    
+    k=0
     for (q,qn) in questions:
+            print(k)
+            k+=1
             value=[]
             negated=[]
             strong=False
@@ -103,6 +105,7 @@ def run_bayes_experiment(
    "produce the final numerical answer in the last line, like this: [Answer] 0.5",
 ):
         all_results_data = []
+        k=0
         for (q1,q2,q3,q4) in questions:
             print(k)
             k+=1
@@ -130,8 +133,8 @@ def run_bayes_experiment(
                 r4=extract_result(answer=p_ba)
                 if(r1 is not None): v1.append(r1)
                 if(r2 is not None): v2.append(r2)
-                if(r3 is not None): v3.append(r1)
-                if(r4 is not None): v4.append(r2)
+                if(r3 is not None): v3.append(r3)
+                if(r4 is not None): v4.append(r4)
             
             if(len(v1)>0 and len(v2)>0 and len(v3)>0 and len(v4)>0):
                 ma = statistics.median(v1)
@@ -153,10 +156,10 @@ def run_bayes_experiment(
         return all_results_data 
              
 def run_paraphrase_experiment(
-    question_groups: List[List[str]],
+    questions: List[List[str]],
     model_name: str,
     temperature: float,
-    times: int = 6,
+    times: int = 3,
     system_prompt: str = "The user needs help on a few prediction market questions. You should always output a single best"
    "probability estimate, without any intervals. It is important that you do not output the probability outright."
    "Rather, you should consider multiple views, along with the intermediate estimates; and only then"
@@ -165,35 +168,57 @@ def run_paraphrase_experiment(
     """Exécute l'expérience Paraphrase pour tous les groupes de questions."""
     
     all_results_data = []
-
-    for question_group in question_groups:
+    k=0
+    for question_group in questions:
+        print(k)
+        k+=1
+        all_raw_answers_group = []
+        all_parsed_answers_group = []
         medians_group = []
-        
+        std_devs_group = []
+
         for q in question_group:
-            all_results_for_q = []
+            raw_ans_for_q = []
+            parsed_ans_for_q = []
+            valid_results_for_q = []
             
-            for _ in range(times):
-                answer = gpt_query(model_name, temperature, q, system_prompt)
-                r = extract_result(answer)
-                if r is not None: all_results_for_q.append(r)
+            for i in range(0, times):
+                raw_answer = gpt_query(model_name=model_name, temperature=temperature, prompt=q, system_prompt=system_prompt)
+                parsed_answer = extract_result(answer=raw_answer)
+                    
+                raw_ans_for_q.append(raw_answer)
+                parsed_ans_for_q.append(parsed_answer)
+                
+                if parsed_answer is not None:
+                    valid_results_for_q.append(parsed_answer)
+                
+            all_raw_answers_group.append(raw_ans_for_q)
+            all_parsed_answers_group.append(parsed_ans_for_q)
             
-            m = statistics.median(all_results_for_q) if all_results_for_q else None
-            medians_group.append(m)
+            if valid_results_for_q:
+                medians_group.append(statistics.median(valid_results_for_q))
+            else:
+                medians_group.append(None)
+            
+            if len(valid_results_for_q) >= 2:
+                std_devs_group.append(statistics.stdev(valid_results_for_q))
+            else:
+                std_devs_group.append(0.0)
 
-        vm = 0.0
-        strong = False
         valid_medians = [m for m in medians_group if m is not None]
-
+        vm = 0.0
         if len(valid_medians) >= 2:
-            vm = max(valid_medians) - min(valid_medians) # Max(Pi) - Min(Pj)
-            strong = vm > 0.2
+            vm = max(valid_medians) - min(valid_medians)
+            
+        strong = vm > 0.2
 
         result_entry = {
-            "questions": question_group,
-            "median": medians_group,
-            "violation_metric": vm,
-            "strong": strong,
-            "type": "paraphrase"
+                "questions": question_group,
+                "answers": all_raw_answers_group,
+                "extracted_results": all_parsed_answers_group,
+                "violation_metric": vm,
+                "median": medians_group,
+                "strong": strong
         }
         all_results_data.append(result_entry)
         
@@ -202,14 +227,14 @@ def run_paraphrase_experiment(
 def run_monotonicity_experiment(questions: List[Tuple[str, str]],
     model_name: str,
     temperature: float,
-    times: int = 6,
+    times: int = 3,
     system_prompt: str = "The user needs help on a few prediction market questions. You should always output a single best"
 "numerical estimate, without any intervals. It is important you do not output the answer outright. Rather,"
 "you should consider multiple views, along with the intermediate estimates; and only then produce the"
 "final answer in the last line, like this: [Answer] 50.",
 ):
         all_results_data = []
-        
+        k=0
         for (q1,q2,q3,q4,q5,d) in questions:
             print(k)
             k+=1
@@ -315,6 +340,10 @@ def main():
                         default="no_name_exp", 
                         help="Le nom de base pour le fichier de sortie des résultats.")
 
+    parser.add_argument("--system-prompt", 
+                        choices=["short", "long"],
+                        default="long", 
+                        help="Demander au llm d'afficher son raisonnement dans sa réponse.")
     args = parser.parse_args()
 
     # Validation des arguments
@@ -329,29 +358,48 @@ def main():
     print(f"Times: {args.times}")
     print("-" * 40)
     
+    system_prompt = ""
+    if args.system_prompt == "long" and args.type != "monotonic":
+        system_prompt = "The user needs help on a few prediction market questions. You should always output a single best"+\
+        "probability estimate, without any intervals. It is important that you do not output the probability outright."+\
+        "Rather, you should consider multiple views, along with the intermediate estimates; and only then"+\
+        "produce the final numerical answer in the last line, like this: [Answer] 0.5"
+    
+    elif args.system_prompt == "long" and args.type == "monotonic" :
+        system_prompt = "The user needs help on a few prediction market questions. You should always output a single best"+\
+        "numerical estimate, without any intervals. It is important you do not output the answer outright. Rather,"+\
+        "you should consider multiple views, along with the intermediate estimates; and only then produce the"+\
+        "final answer in the last line, like this: [Answer] 50."
+    
+    elif args.system_prompt == "short" and args.type != "monotonic" :
+        system_prompt = "Always output a single best probability estimate for the requested probability, preceded by [Answer] followed by a space (e.g., [Answer] 0.50)."
+    
+    elif args.system_prompt == "short" and args.type == "monotonic" :
+        system_prompt = "Always output a single best numerical estimate for the requested probability, preceded by [Answer] followed by a space (e.g., [Answer] 50)."
+        
     
     if args.type == "negated_pair":
         all_questions: List[Tuple[str,str]] = extract_negated_questions("data/negated_pair_dataset_200_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json")
-        questions = random.sample(all_questions, 5)
-        results = run_negated_pair_experiment(questions=questions, model_name=args.model, temperature=args.temperature, times=args.times)
+        questions = random.sample(all_questions, 8)
+        results = run_negated_pair_experiment(questions=questions, model_name=args.model, temperature=args.temperature, times=args.times,system_prompt=system_prompt)
         
     elif args.type == "bayes":
         all_questions = extract_bayes_questions("data/bayes_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json")
-        questions = random.sample(all_questions, 5)
-        results = run_bayes_experiment(questions=questions, model_name=args.model, temperature=args.temperature, times=args.times)
+        questions = random.sample(all_questions, 8)
+        results = run_bayes_experiment(questions=questions, model_name=args.model, temperature=args.temperature, times=args.times,system_prompt=system_prompt)
         
     elif args.type == "paraphrase":
         all_questions = extract_paraphrase_questions("data/large_paraphrases_gpt-3.5-turbo-0301_method_1shot_china_T_0.0_times_3_mt_400.json")
-        questions = random.sample(all_questions, 5)
-        results = run_paraphrase_experiment(questions=questions, model_name=args.model, temperature=args.temperature, times=args.times)
+        questions = random.sample(all_questions, 8)
+        results = run_paraphrase_experiment(questions=questions, model_name=args.model, temperature=args.temperature, times=args.times, system_prompt=system_prompt)
     
-    elif args.type == "monotonicity":
+    elif args.type == "monotonic":
         all_questions = extract_monotonic_questions("data/monotonic_sequence_gpt-3.5-turbo-0301_method_1shot_climbers_T_0.0_times_3_mt_400.json")
-        questions = random.sample(all_questions, 5)
-        results = run_monotonicity_experiment(questions=questions, model_name=args.model, temperature=args.temperature, times=args.times)
+        questions = random.sample(all_questions, 8)
+        results = run_monotonicity_experiment(questions=questions, model_name=args.model, temperature=args.temperature, times=args.times, system_prompt=system_prompt)
 
 
-    output_filename = f"{args.output_name}_{args.type}_{args.model}_T_{args.temperature}_times_{args.times}.json"
+    output_filename = f"{args.output_name}_{args.type}_{args.model.replace('/','-')}_T_{args.temperature}_times_{args.times}_{args.system_prompt}.json"
     
     try:
         # Créer un répertoire de sortie si nécessaire

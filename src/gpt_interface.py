@@ -39,40 +39,37 @@ def gpt_query(
 
     num_seconds_to_wait_max = 300
 
-    if "gpt-3.5" in model_name or "gpt-4" in model_name:
-        messages = [
+    
+    messages = [
             chat_message("system", system_prompt),
             chat_message("user", prompt),
         ]
 
-        time_waited = 0
-        wait_time_seconds = 5
-        while time_waited < num_seconds_to_wait_max:
-            try:
-                completion = client.chat.completions.create(
+    time_waited = 0
+    wait_time_seconds = 5
+    while time_waited < num_seconds_to_wait_max:
+        try:
+            completion = client.chat.completions.create(
                     extra_body={},
                     model=model_name,
                     messages=messages,
                     temperature=temperature
                 )
                 
-                break
-            except APIError as e:
+            break
+        except APIError as e:
                 logging.info(f"APIError: {e}. Waiting {wait_time_seconds} seconds...")
                 time.sleep(wait_time_seconds)
                 time_waited += wait_time_seconds
-            except RateLimitError as e:
+        except RateLimitError as e:
                 logging.info(f"RateLimitError: {e}. Waiting {wait_time_seconds} seconds...")
                 time.sleep(wait_time_seconds)
                 time_waited += wait_time_seconds
                 wait_time_seconds *= 2
-        else:
-            raise TimeoutError(
-                f"Timed out waiting for {model_name} to respond after"
-                f" {num_seconds_to_wait_max} seconds."
-            )
-
-        return completion.choices[0].message.content
-
     else:
-        raise NotImplementedError
+        raise TimeoutError(
+            f"Timed out waiting for {model_name} to respond after"
+            f" {num_seconds_to_wait_max} seconds."
+        )
+
+    return completion.choices[0].message.content

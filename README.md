@@ -73,7 +73,7 @@ OPENAI_API_BASE="URL_OPENROUTER" #par exemple https://openrouter.ai/api/v1
 python3 src/main.py
 ```
 
-* SI vous souhaitez utiliser un container Docker :
+* SI vous souhaitez utiliser un container Docker (remarque: en raison de la faible qualité du wifi INSA, nous n'avons pas pu tester le fonctionnement de notre container Docker):
 Exécuter ces commandes à la racine du projet :
 
 ```bash
@@ -90,23 +90,18 @@ Les résultats des expériences sont stockées dans des fichiers json dans le do
 
 Pour reproduire les résultats et calculer la moyenne de violation ainsi que le pourcentage de "strong violations" vous pouvez éxécuter le notebook Jupyter "analysis.ipynb" présent dans le dossier reproducibility/
 
-### Problèmes renontrés et améliorations
+### Problèmes renontrés et améliorations et Est-ce que l'étude originale est reproductible ?
 
-- Report any challenges, errors, or deviations from the original study.
-- Describe how these issues were resolved or improved, if applicable.
+Le compte rendu de cette section est présent à la fin du notebook reproducibility/analysis.ipynb.
 
-### Is the Original Study Reproducible?
-- Summarize the success or failure of reproducing the study.
-- Include supporting evidence, such as comparison tables, plots, or metrics.
-
-## Replicability
+## Replcabilité
 
 ### Variability Factors
 - **List of Factors**: Identify all potential sources of variability (e.g., dataset splits, random seeds, hardware).  
   Example table:
   | Variability Factor | Possible Values     | Relevance                                   |
   |--------------------|---------------------|--------------------------------------------|
-  | Random Seed        | [0, 42, 123]       | Impacts consistency of random processes    |
+  | LLM model       | [0, 42, 123]       | Impacts consistency of random processes    |
   | Hardware           | CPU, GPU (NVIDIA)  | May affect computation time and results    |
   | Dataset Version    | v1.0, v1.1         | Ensures comparability across experiments   |
 
