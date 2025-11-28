@@ -1,0 +1,386 @@
+[
+    {
+        "questions": [
+            "Will humanity maintain an off-Earth presence continuously until 1 January 2050?",
+            "Will humanity not maintain an off-Earth presence continuously until 1 January 2050?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.75",
+                "[Answer] 0.80",
+                "[Answer] 0.85",
+                "[Answer] 0.85",
+                "[Answer] 0.85",
+                "[Answer] 0.85"
+            ],
+            [
+                "[Answer] 0.30",
+                "[Answer] 0.30",
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.30",
+                "[Answer] 0.35"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.75,
+                0.8,
+                0.85,
+                0.85,
+                0.85,
+                0.85
+            ],
+            [
+                0.3,
+                0.3,
+                0.4,
+                0.4,
+                0.3,
+                0.35
+            ]
+        ],
+        "median": [
+            0.85,
+            0.32499999999999996
+        ],
+        "violation_metric": 0.17499999999999993,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will the Unique Games Conjecture be proved by 2030?",
+            "Will the Unique Games Conjecture not be proved by 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ]
+        ],
+        "median": [
+            0.5,
+            0.5
+        ],
+        "violation_metric": 0.0,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will one government govern 80% of Earth's population and economy by 2100?",
+            "Will it not be the case that one government governs 80% of Earth's population and economy by 2100?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.1",
+                "[Answer] 0.10"
+            ],
+            [
+                "[Answer] 0.15",
+                "[Answer] 0.10",
+                "[Answer] 0.85",
+                "[Answer] 0.90",
+                "[Answer] 0.85",
+                "[Answer] 0.90"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.15,
+                0.1,
+                0.85,
+                0.9,
+                0.85,
+                0.9
+            ]
+        ],
+        "median": [
+            0.1,
+            0.85
+        ],
+        "violation_metric": 0.050000000000000044,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will we know what Dark Matter is before 2050?",
+            "Will we not know what Dark Matter is before 2050?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.55",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            [
+                0.6,
+                0.55,
+                0.6,
+                0.6,
+                0.6,
+                0.6
+            ]
+        ],
+        "median": [
+            0.5,
+            0.6
+        ],
+        "violation_metric": 0.09999999999999998,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will the FDA or EMA withdraw approval of Semaglutide for the treatment of obesity by 2027?",
+            "Will the FDA or EMA not withdraw approval of Semaglutide for the treatment of obesity by 2027?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.10",
+                "[Answer] 0.05",
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.05"
+            ],
+            [
+                "[Answer] 0.95",
+                "[Answer] 0.90",
+                "[Answer] 0.90",
+                "[Answer] 0.90",
+                "[Answer] 0.90",
+                "[Answer] 0.90"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.1,
+                0.05,
+                0.1,
+                0.1,
+                0.1,
+                0.05
+            ],
+            [
+                0.95,
+                0.9,
+                0.9,
+                0.9,
+                0.9,
+                0.9
+            ]
+        ],
+        "median": [
+            0.1,
+            0.9
+        ],
+        "violation_metric": 0.0,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will starlink conduct an IPO before 2030?",
+            "Will starlink not conduct an IPO before 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.65",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.40",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.7,
+                0.65,
+                0.6,
+                0.6,
+                0.65,
+                0.6
+            ],
+            [
+                0.5,
+                0.5,
+                0.5,
+                0.4,
+                0.5,
+                0.5
+            ]
+        ],
+        "median": [
+            0.625,
+            0.5
+        ],
+        "violation_metric": 0.125,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will a non-state actor develop their own nuclear weapon by 2030?",
+            "Will a non-state actor not develop their own nuclear weapon by 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.15",
+                "[Answer] 0.20",
+                "[Answer] 0.20",
+                "[Answer] 0.15",
+                "[Answer] 0.20",
+                "[Answer] 0.15"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.15,
+                0.2,
+                0.2,
+                0.15,
+                0.2,
+                0.15
+            ],
+            [
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.7
+            ]
+        ],
+        "median": [
+            0.175,
+            0.7
+        ],
+        "violation_metric": 0.125,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will the USD be the dominant global reserve currency in 2050?",
+            "Will the USD not be the dominant global reserve currency in 2050?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.40",
+                "[Answer] 0.60",
+                "[Answer] 0.45"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.6,
+                0.6,
+                0.6,
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.6,
+                0.6,
+                0.6,
+                0.4,
+                0.6,
+                0.45
+            ]
+        ],
+        "median": [
+            0.6,
+            0.6
+        ],
+        "violation_metric": 0.19999999999999996,
+        "strong": false
+    }
+]

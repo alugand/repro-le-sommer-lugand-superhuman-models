@@ -1,0 +1,674 @@
+[
+    {
+        "questions": [
+            "Will GiveWell recommend 1 or more grants to support breastfeeding promotion or denote it a \"top charity\" before 2027?",
+            "Before 2027, will GiveWell endorse 1 or more grants for breastfeeding promotion or label it a \"top charity\"?",
+            "Will GiveWell suggest 1 or more grants for promoting breastfeeding or classify it as a \"top charity\" prior to 2027?",
+            "Prior to 2027, will GiveWell propose 1 or more grants for the advancement of breastfeeding promotion or designate it as a \"top charity\"?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.35",
+                "[Answer] 0.45",
+                "[Answer] 0.30",
+                "[Answer] 0.45",
+                "[Answer] 0.40"
+            ],
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.45",
+                "[Answer] 0.40",
+                "[Answer] 0.45",
+                "[Answer] 0.30"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.60",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.60",
+                "[Answer] Unknown",
+                "[Answer] Unable to provide a probability as it requires speculation on future actions of a specific organization.",
+                "[Answer] 0.50",
+                "[Answer] Unable to provide a probability estimate as it depends on various factors that are unpredictable."
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.4,
+                0.35,
+                0.45,
+                0.3,
+                0.45,
+                0.4
+            ],
+            [
+                0.4,
+                0.4,
+                0.45,
+                0.4,
+                0.45,
+                0.3
+            ],
+            [
+                0.6,
+                0.5,
+                0.5,
+                0.5,
+                0.6,
+                0.5
+            ],
+            [
+                0.4,
+                0.6,
+                null,
+                null,
+                0.5,
+                null
+            ]
+        ],
+        "violation_metric": 0.09999999999999998,
+        "median": [
+            0.4,
+            0.4,
+            0.5,
+            0.5
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will the United States Environmental Protection Agency pass a PFAS Maximum Contaminant Level rule for all municipal water systems in the United States by January 1, 2030?",
+            "By January 1, 2030, will the United States Environmental Protection Agency establish a PFAS Maximum Contaminant Level regulation for every municipal water system in the country?",
+            "Will a PFAS Maximum Contaminant Level regulation be implemented for all US municipal water systems by the United States Environmental Protection Agency before January 1, 2030?",
+            "Will all municipal water systems in the United States be subject to a PFAS Maximum Contaminant Level rule instituted by the Environmental Protection Agency by January 1, 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.45",
+                "[Answer] 0.55",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.65"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.35"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.45",
+                "[Answer] 0.50",
+                "[Answer] 0.45",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.40",
+                "[Answer] 0.50",
+                "[Answer] 0.40",
+                "[Answer] 0.60"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.65,
+                0.45,
+                0.55,
+                0.6,
+                0.6,
+                0.65
+            ],
+            [
+                0.35,
+                0.35,
+                0.35,
+                0.4,
+                0.4,
+                0.35
+            ],
+            [
+                0.5,
+                0.45,
+                0.5,
+                0.45,
+                0.5,
+                0.5
+            ],
+            [
+                0.5,
+                0.5,
+                0.4,
+                0.5,
+                0.4,
+                0.6
+            ]
+        ],
+        "violation_metric": 0.25,
+        "median": [
+            0.6,
+            0.35,
+            0.5,
+            0.5
+        ],
+        "strong": true
+    },
+    {
+        "questions": [
+            "By 1 January 2050, will the lost ascent stage of the Apollo 10 Lunar Module be recovered (i.e. located, captured, and physically transported to some location where humans have a presence at that time, such as Earth, the Moon, Mars or elsewhere) successfully?",
+            "By 1 January 2050, will the missing ascent stage of the Apollo 10 Lunar Module be successfully retrieved (meaning found, captured, and physically brought to a location where humans are present, such as Earth, the Moon, Mars, or another place)?",
+            "Will the lost ascent stage of the Apollo 10 Lunar Module be successfully found, captured, and physically relocated to a site with human presence, such as Earth, the Moon, Mars, or elsewhere, by 1 January 2050?",
+            "By the time 1 January 2050 arrives, will the lost ascent stage of the Apollo 10 Lunar Module have been successfully tracked down, seized, and physically moved to a location where humans can be found, like Earth, the Moon, Mars, or some other place?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05"
+            ],
+            [
+                "[Answer] 0.01",
+                "[Answer] 0.01",
+                "[Answer] 0.01",
+                "[Answer] 0.05",
+                "[Answer] 0.01",
+                "[Answer] 0.01"
+            ],
+            [
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.01",
+                "[Answer] 0.05",
+                "[Answer] 0.05"
+            ],
+            [
+                "[Answer] 0.01",
+                "[Answer] 0.10",
+                "[Answer] 0.01",
+                "[Answer] 0.01",
+                "[Answer] 0.05",
+                "[Answer] 0.05"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.05
+            ],
+            [
+                0.01,
+                0.01,
+                0.01,
+                0.05,
+                0.01,
+                0.01
+            ],
+            [
+                0.05,
+                0.05,
+                0.05,
+                0.01,
+                0.05,
+                0.05
+            ],
+            [
+                0.01,
+                0.1,
+                0.01,
+                0.01,
+                0.05,
+                0.05
+            ]
+        ],
+        "violation_metric": 0.04,
+        "median": [
+            0.05,
+            0.01,
+            0.05,
+            0.030000000000000002
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will there be at least one fatality from an offensive nuclear detonation in China by 2030, if there's an offensive detonation anywhere by then?",
+            "If an offensive nuclear explosion occurs anywhere by 2030, will it result in a minimum of one death from such an incident in China?",
+            "In the event of an offensive nuclear blast taking place anywhere by 2030, will China experience a minimum of one fatality from it?",
+            "Assuming an offensive nuclear detonation happens anywhere by 2030, will China witness at least one fatality due to the explosion?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.20"
+            ],
+            [
+                "[Answer] Unable to estimate.",
+                "[Answer] 0.50",
+                "[Answer] Unable to provide a probability as it depends on various unpredictable factors such as the location and size of the explosion, wind patterns, and the response of the Chinese government.",
+                "[Answer] Unable to provide a probability estimate. The outcome would depend on various unpredictable factors such as the location of the explosion, wind patterns, and emergency response measures.",
+                "[Answer] Unable to provide a probability estimate due to the speculative and complex nature of the scenario.",
+                "[Answer] Unable to provide a probability as it depends on various unpredictable factors such as the location, size of the explosion, prevailing winds, and response measures."
+            ],
+            [
+                "[Answer] Unknown",
+                "[Answer] Unable to provide a probability as it depends on various unpredictable factors such as the location of the blast, wind patterns, and China's defense measures.",
+                "[Answer] Unknown",
+                "[Answer] Unable to calculate probability. This depends on numerous unpredictable factors such as the location of the blast, the wind direction, the size of the blast, and China's preparedness and response.",
+                "[Answer] Unable to provide a probability due to the speculative and complex nature of the scenario.",
+                "[Answer] Unable to calculate probability. This would require speculation on unpredictable future events and variables."
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate due to the speculative and complex nature of the scenario.",
+                "[Answer] Unable to provide a probability estimate. This situation is highly speculative and depends on numerous unpredictable factors, such as the location and size of the detonation, wind patterns, political decisions, and many other variables.",
+                "[Answer] Unable to provide a probability estimate. The outcome depends on numerous unpredictable factors such as the location of the detonation, wind patterns, the response of health and safety organizations, and many others.",
+                "[Answer] Unable to provide a probability estimate. The outcome depends on various unpredictable factors such as the location of the detonation, prevailing winds, and China's preparedness and response.",
+                "[Answer] Unable to provide a probability as it is dependent on numerous unpredictable factors such as the location of the detonation, wind patterns, and China's preparedness and response.",
+                "[Answer] Unknown"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.2
+            ],
+            [
+                null,
+                0.5,
+                null,
+                null,
+                null,
+                null
+            ],
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        ],
+        "violation_metric": 0.0,
+        "median": [
+            0.5,
+            0.5,
+            null,
+            null
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will the probability (of both the Metaculus- and community predictions) artificial intelligence causing a global catastrophe (given that a global catastrophe does occur) remain above 5% in each 6-month period before 2040?",
+            "Will the likelihood of artificial intelligence causing a global catastrophe (assuming a global catastrophe happens) stay at or above 5% for each 6-month interval before 2040 for both the Metaculus and the community predictions?",
+            "Does the probability of artificial intelligence leading to a global catastrophe (assuming a global catastrophe happens) remain constant at 5% or higher for every 6-month period until 2040, as predicted by both the Metaculus- and the community predictions?",
+            "Will both the Metaculus- and the community forecasts indicate that the chance of artificial intelligence causing a global catastrophe (in the event of a global catastrophe) stays at or above 5% in each 6-month period until 2040?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] Unable to provide a probability as the question involves specific predictions from Metaculus and the community, which are not provided or available in the current context.",
+                "[Answer] Unknown. This question requires access to specific, up-to-date information from both Metaculus and the community predictions, which the AI does not have.",
+                "[Answer] Unable to provide a probability estimate. The question asks for a prediction that requires specific data from Metaculus and the community predictions, which are not provided nor accessible in real-time by the AI.",
+                "[Answer] Unknown",
+                "[Answer] Unable to provide a probability estimate as it requires access to real-time data from Metaculus and the community predictions which is not available.",
+                "[Answer] Unable to provide a probability estimate as it requires access to specific and up-to-date data from Metaculus and the community predictions, which I currently don't have."
+            ],
+            [
+                "[Answer] The assistant cannot provide a probability estimate as it doesn't have real-time access to current or future predictions by Metaculus or any other community.",
+                "[Answer] Unable to provide a probability estimate as it requires specific data from Metaculus- and community predictions which is not provided.",
+                "[Answer] Unable to provide a probability estimate. The model doesn't have real-time access to the Metaculus- or community predictions.",
+                "[Answer] Insufficient information to provide a probability estimate.",
+                "[Answer] The assistant cannot provide a probability estimate as it lacks real-time access to data and the ability to predict future events.",
+                "[Answer] Insufficient data to provide a probability estimate."
+            ],
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.30",
+                "[Answer] 0.40",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.25"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            [
+                0.4,
+                0.3,
+                0.4,
+                0.35,
+                0.35,
+                0.25
+            ]
+        ],
+        "violation_metric": 0.15000000000000002,
+        "median": [
+            0.5,
+            null,
+            null,
+            0.35
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Given that a catastrophe occurs caused by \"other risks\" that results in the reduction of the global population of at least 10% by 2100, will the global population decline by more than 95% relative to the pre-catastrophe population?",
+            "Assuming a catastrophe triggered by \"other risks\" leads to a minimum 10% decrease in the worldwide population by 2100, will there be a decline of over 95% in the global population compared to before the disaster?",
+            "In the event that \"other risks\" provoke a disaster, reducing the world's population by a minimum of 10% by the year 2100, will we witness a drop of more than 95% in the global population relative to the pre-disaster levels?",
+            "Provided that \"other risks\" cause a calamity resulting in a global population reduction of at least 10% by 2100, is it expected that the worldwide population will experience a decline exceeding 95% compared to the population prior to the catastrophe?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.10",
+                "[Answer] 0.05"
+            ],
+            [
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.10"
+            ],
+            [
+                "[Answer] 0.02",
+                "[Answer] 0.10",
+                "[Answer] 0.01",
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.01"
+            ],
+            [
+                "[Answer] 0.01",
+                "[Answer] 0.01",
+                "[Answer] 0.05",
+                "[Answer] 0.01",
+                "[Answer] 0.01",
+                "[Answer] 0.01"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.05,
+                0.05,
+                0.05,
+                0.05,
+                0.1,
+                0.05
+            ],
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.02,
+                0.1,
+                0.01,
+                0.1,
+                0.1,
+                0.01
+            ],
+            [
+                0.01,
+                0.01,
+                0.05,
+                0.01,
+                0.01,
+                0.01
+            ]
+        ],
+        "violation_metric": 0.09000000000000001,
+        "median": [
+            0.05,
+            0.1,
+            0.060000000000000005,
+            0.01
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will any Kurdish independence movement succeed to the point of a Kurdish state being admitted as a member state of the United Nations by the beginning of 2030?",
+            "By the start of 2030, will the United Nations accept a Kurdish state as a member state due to the success of a Kurdish independence movement?",
+            "Is it possible for a Kurdish independence movement to achieve enough success by the beginning of 2030 to the extent that the United Nations will recognize a Kurdish state as a member state?",
+            "Can a Kurdish state be admitted to the United Nations as a member state by the start of 2030 as a result of a successful Kurdish independence movement?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.20",
+                "[Answer] 0.10",
+                "[Answer] 0.15",
+                "[Answer] 0.15",
+                "[Answer] 0.15",
+                "[Answer] 0.15"
+            ],
+            [
+                "[Answer] 0.30",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.25",
+                "[Answer] 0.30",
+                "[Answer] 0.25"
+            ],
+            [
+                "[Answer] 0.15",
+                "[Answer] 0.25",
+                "[Answer] 0.20",
+                "[Answer] 0.25",
+                "[Answer] 0.15",
+                "[Answer] 0.15"
+            ],
+            [
+                "[Answer] 0.20",
+                "[Answer] 0.35",
+                "[Answer] 0.25",
+                "[Answer] 0.35",
+                "[Answer] 0.20",
+                "[Answer] 0.35"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.2,
+                0.1,
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ],
+            [
+                0.3,
+                0.35,
+                0.35,
+                0.25,
+                0.3,
+                0.25
+            ],
+            [
+                0.15,
+                0.25,
+                0.2,
+                0.25,
+                0.15,
+                0.15
+            ],
+            [
+                0.2,
+                0.35,
+                0.25,
+                0.35,
+                0.2,
+                0.35
+            ]
+        ],
+        "violation_metric": 0.15,
+        "median": [
+            0.15,
+            0.3,
+            0.175,
+            0.3
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will the number of people globally living with HIV/AIDS in 2037 be 36.9 million or more, according to the median estimate from UNAIDS?",
+            "According to UNAIDS median estimate, will the global population of people living with HIV/AIDS in 2037 be 36.9 million or above?",
+            "According to UNAIDS, by 2037, will the median estimate of the number of people worldwide living with HIV/AIDS be 36.9 million or higher?",
+            "Will UNAIDS’ median estimate of the number of people living with HIV/AIDS globally be 36.9 million or more by 2037?"
+        ],
+        "answers": [
+            [
+                "[Answer] Information not available.",
+                "[Answer] Unable to provide a probability estimate. The UNAIDS has not publicly released a median estimate for the number of people globally living with HIV/AIDS in 2037.",
+                "[Answer] Information not available",
+                "[Answer] Information not available.",
+                "[Answer] Information not available.",
+                "[Answer] Unable to provide a probability as UNAIDS has not released such specific predictions for the year 2037."
+            ],
+            [
+                "[Answer] Unable to provide a probability as the prediction for the global population of people living with HIV/AIDS in 2037 is not available in the current dataset.",
+                "[Answer] Unable to provide a probability as it requires specific data and future predictions that are currently unavailable.",
+                "[Answer] Unable to provide a probability as this requires future prediction data which is not currently available.",
+                "[Answer] Unable to provide a probability estimate as it requires specific future data that is currently unavailable.",
+                "[Answer] Unable to provide a probability as future predictions for HIV/AIDS cases depend on various factors like advancements in medical treatments, global health initiatives, and changes in social behaviors which are not predictable with certainty.",
+                "[Answer] Unable to provide a probability estimate as it requires access to up-to-date data and predictive models, which I currently lack."
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate as it requires specific future projections which are not currently available.",
+                "[Answer] Unable to provide a probability as it requires specific future data that is not currently available.",
+                "[Answer] Unable to provide a probability estimate as the data required for this prediction is not available or specified.",
+                "[Answer] Unable to provide a probability estimate as it requires specific future data not currently available.",
+                "[Answer] Unable to provide a probability estimate as it requires specific future data that isn't currently available.",
+                "[Answer] Unable to provide a probability estimate as it requires access to real-time data and future predictions, which I currently do not have."
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate as it requires specific data and analysis that are not available.",
+                "[Answer] Unable to provide a probability estimate. This requires access to real-time data and expert analysis in the field of global health, specifically HIV/AIDS trends and projections, which I do not have.",
+                "[Answer] Unable to provide a probability as it depends on various unpredictable factors such as advancements in medical technology, prevention efforts, and global health policies.",
+                "[Answer] Unable to provide a probability estimate as it requires specific knowledge and prediction about future global health trends, which can't be accurately determined.",
+                "[Answer] Unable to provide a probability as it requires specific data and projections that are not currently available.",
+                "[Answer] Unable to provide a probability estimate as it requires access to current data and future projections which are not accessible to me."
+            ]
+        ],
+        "extracted_results": [
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        ],
+        "violation_metric": 0.0,
+        "median": [
+            null,
+            null,
+            null,
+            null
+        ],
+        "strong": false
+    }
+]

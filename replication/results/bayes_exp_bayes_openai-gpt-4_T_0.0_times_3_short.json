@@ -1,0 +1,420 @@
+[
+    {
+        "questions": [
+            "Will a new social media platform surpass 100 million active users by the end of 2024?",
+            "Will there be a significant increase in global internet usage by the end of 2024?",
+            "Conditional on a new social media platform surpassing 100 million active users by the end of 2024, will there be a significant increase in global internet usage by the same time?",
+            "Conditional on a significant increase in global internet usage by the end of 2024, will a new social media platform surpass 100 million active users by the same time?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.85",
+                "[Answer] 0.90",
+                "[Answer] 0.85"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.85,
+                0.9,
+                0.85
+            ],
+            [
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                0.6,
+                0.6,
+                0.6
+            ]
+        ],
+        "median": [
+            0.6,
+            0.85,
+            0.7,
+            0.6
+        ],
+        "violation_metric": 0.4847679857416329,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will a major city experience a population decline of more than 10% between 2023 and 2050?",
+            "Will a new form of public transportation be widely adopted in urban areas by 2050?",
+            "Conditional on a major city experiencing a population decline of more than 10% between 2023 and 2050, will a new form of public transportation be widely adopted in urban areas by the same time?",
+            "Conditional on a new form of public transportation being widely adopted in urban areas by 2050, will a major city experience a population decline of more than 10% between 2023 and the same time?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.35,
+                0.35,
+                0.35
+            ]
+        ],
+        "median": [
+            0.6,
+            0.7,
+            0.6,
+            0.35
+        ],
+        "violation_metric": 0.458257569495584,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will a major breakthrough in quantum computing occur between 2023 and 2030?",
+            "Will global cybersecurity threats decrease by 20% between 2023 and 2030?",
+            "Conditional on a major breakthrough in quantum computing occurring between 2023 and 2030, will global cybersecurity threats decrease by 20% during the same period?",
+            "Conditional on global cybersecurity threats decreasing by 20% between 2023 and 2030, will a major breakthrough in quantum computing occur during the same period?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.45",
+                "[Answer] 0.45",
+                "[Answer] 0.45"
+            ],
+            [
+                "[Answer] 0.15",
+                "[Answer] 0.15",
+                "[Answer] 0.15"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.45,
+                0.45,
+                0.45
+            ],
+            [
+                0.15,
+                0.15,
+                0.15
+            ],
+            [
+                0.35,
+                0.35,
+                0.35
+            ],
+            [
+                0.5,
+                0.5,
+                0.5
+            ]
+        ],
+        "median": [
+            0.45,
+            0.15,
+            0.35,
+            0.5
+        ],
+        "violation_metric": 0.4153311931459038,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will a major company achieve a market capitalization of $5 trillion between 2023 and 2030?",
+            "Will the global stock market experience a 20% increase in value between 2023 and 2030?",
+            "Conditional on a major company achieving a market capitalization of $5 trillion between 2023 and 2030, will the global stock market experience a 20% increase in value during the same period?",
+            "Conditional on the global stock market experiencing a 20% increase in value between 2023 and 2030, will a major company achieve a market capitalization of $5 trillion during the same period?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.45",
+                "[Answer] 0.40",
+                "[Answer] 0.45"
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate as it requires specific financial forecasting expertise and access to current and future economic data.",
+                "[Answer] 0.50",
+                "[Answer] Unable to provide a probability estimate. This prediction would require specific financial expertise and access to current and future market data."
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.45,
+                0.4,
+                0.45
+            ],
+            [
+                0.5
+            ],
+            [
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.6,
+                0.6,
+                0.6
+            ]
+        ],
+        "median": [
+            0.45,
+            0.5,
+            0.6,
+            0.6
+        ],
+        "violation_metric": 0.17320508075688765,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will a major city implement a large-scale vertical farming project by 2030?",
+            "Will the global population reach 9 billion by 2030?",
+            "Conditional on a major city implementing a large-scale vertical farming project by 2030, will the global population reach 9 billion by the same time?",
+            "Conditional on the global population reaching 9 billion by 2030, will a major city implement a large-scale vertical farming project by the same time?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.40"
+            ],
+            [
+                "[Answer] 0.85",
+                "[Answer] 0.85",
+                "[Answer] 0.85"
+            ],
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                0.6,
+                0.6,
+                0.4
+            ],
+            [
+                0.85,
+                0.85,
+                0.85
+            ],
+            [
+                0.65,
+                0.65,
+                0.65
+            ]
+        ],
+        "median": [
+            0.7,
+            0.6,
+            0.85,
+            0.65
+        ],
+        "violation_metric": 0.23452078799117157,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will a universal basic income policy be implemented in a G7 country by 2035?",
+            "Will the global unemployment rate decrease by 2 percentage points by 2035?",
+            "Conditional on a universal basic income policy being implemented in a G7 country by 2035, will the global unemployment rate decrease by 2 percentage points by the same time?",
+            "Conditional on the global unemployment rate decreasing by 2 percentage points by 2035, will a universal basic income policy be implemented in a G7 country by the same time?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.45",
+                "[Answer] 0.40"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.40"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.4,
+                0.45,
+                0.4
+            ],
+            [
+                0.5,
+                0.5,
+                0.5
+            ],
+            [
+                0.4,
+                0.4,
+                0.4
+            ],
+            [
+                0.35,
+                0.35,
+                0.35
+            ]
+        ],
+        "median": [
+            0.4,
+            0.5,
+            0.4,
+            0.35
+        ],
+        "violation_metric": 0.24494897427831785,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will a new form of digital art, with a market value exceeding $10 billion, emerge between now and 2045?",
+            "Will the total value of the global art market increase by 50% from 2020 levels between now and 2045?",
+            "Conditional on a new form of digital art emerging and its market value exceeding $10 billion between now and 2045, will the total value of the global art market increase by 50% from 2020 levels during the same period?",
+            "Conditional on the total value of the global art market increasing by 50% from 2020 levels between now and 2045, will a new form of digital art emerge and its market value exceed $10 billion during the same period?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                0.65,
+                0.65,
+                0.65
+            ],
+            [
+                0.7,
+                0.7,
+                0.7
+            ]
+        ],
+        "median": [
+            0.7,
+            0.7,
+            0.65,
+            0.7
+        ],
+        "violation_metric": 0.187082869338697,
+        "strong": false
+    }
+]

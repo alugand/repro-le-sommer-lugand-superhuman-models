@@ -1,0 +1,504 @@
+[
+    {
+        "questions": [
+            "Will a major breakthrough in battery technology occur by 2030?",
+            "Will electric vehicle sales surpass 50% of global car sales by 2030?",
+            "Conditional on a major breakthrough in battery technology occurring by 2030, will electric vehicle sales surpass 50% of global car sales by the same time?",
+            "Conditional on electric vehicle sales surpassing 50% of global car sales by 2030, will a major breakthrough in battery technology occur by the same time?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.75"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                0.6,
+                0.6,
+                0.6,
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.75
+            ],
+            [
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.7
+            ]
+        ],
+        "median": [
+            0.7,
+            0.6,
+            0.7,
+            0.7
+        ],
+        "violation_metric": 0.26457513110645897,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will a major breakthrough in quantum computing occur between 2023 and 2030?",
+            "Will global cybersecurity threats decrease by 20% between 2023 and 2030?",
+            "Conditional on a major breakthrough in quantum computing occurring between 2023 and 2030, will global cybersecurity threats decrease by 20% during the same period?",
+            "Conditional on global cybersecurity threats decreasing by 20% between 2023 and 2030, will a major breakthrough in quantum computing occur during the same period?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.45",
+                "[Answer] 0.60",
+                "[Answer] 0.45",
+                "[Answer] 0.60",
+                "[Answer] 0.45",
+                "[Answer] 0.55"
+            ],
+            [
+                "[Answer] 0.25",
+                "[Answer] 0.30",
+                "[Answer] 0.25",
+                "[Answer] 0.35",
+                "[Answer] 0.20",
+                "[Answer] 0.30"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] Unable to provide a probability estimate. The occurrence of a major breakthrough in quantum computing is not directly related to the decrease in global cybersecurity threats.",
+                "[Answer] 0.50",
+                "[Answer] Unable to provide a probability estimate. The occurrence of a major breakthrough in quantum computing is not directly related to the decrease in global cybersecurity threats.",
+                "[Answer] 0.50"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.45,
+                0.6,
+                0.45,
+                0.6,
+                0.45,
+                0.55
+            ],
+            [
+                0.25,
+                0.3,
+                0.25,
+                0.35,
+                0.2,
+                0.3
+            ],
+            [
+                0.35,
+                0.35,
+                0.35,
+                0.35,
+                0.35,
+                0.35
+            ],
+            [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ]
+        ],
+        "median": [
+            0.5,
+            0.275,
+            0.35,
+            0.5
+        ],
+        "violation_metric": 0.39210967853395307,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will an eSports event attract a larger global audience than the Super Bowl between now and 2045?",
+            "Will a gaming platform achieve a user base of over 2 billion active users between now and 2045?",
+            "Conditional on an eSports event attracting a larger global audience than the Super Bowl between now and 2045, will a gaming platform achieve a user base of over 2 billion active users during the same period?",
+            "Conditional on a gaming platform achieving a user base of over 2 billion active users between now and 2045, will an eSports event attract a larger global audience than the Super Bowl during the same period?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.45",
+                "[Answer] 0.60",
+                "[Answer] 0.65"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.75",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.6,
+                0.6,
+                0.6,
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.6,
+                0.6,
+                0.6,
+                0.45,
+                0.6,
+                0.65
+            ],
+            [
+                0.7,
+                0.7,
+                0.7,
+                0.7,
+                0.75,
+                0.7
+            ],
+            [
+                0.6,
+                0.65,
+                0.6,
+                0.6,
+                0.65,
+                0.65
+            ]
+        ],
+        "median": [
+            0.6,
+            0.6,
+            0.7,
+            0.625
+        ],
+        "violation_metric": 0.21213203435596423,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will a major breakthrough in artificial intelligence occur by 2040?",
+            "Will the global GDP grow by 50% from 2020 levels by 2040?",
+            "Conditional on a major breakthrough in artificial intelligence occurring by 2040, will the global GDP grow by 50% from 2020 levels by the same time?",
+            "Conditional on the global GDP growing by 50% from 2020 levels by 2040, will a major breakthrough in artificial intelligence occur by the same time?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.60",
+                "[Answer] 0.65"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.70",
+                "[Answer] 0.65",
+                "[Answer] 0.70",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ],
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.60"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.7,
+                0.7,
+                0.65,
+                0.65,
+                0.6,
+                0.65
+            ],
+            [
+                0.7,
+                0.6,
+                0.65,
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.65,
+                0.7,
+                0.65,
+                0.7,
+                0.65,
+                0.65
+            ],
+            [
+                0.6,
+                0.65,
+                0.65,
+                0.6,
+                0.65,
+                0.6
+            ]
+        ],
+        "median": [
+            0.65,
+            0.6,
+            0.65,
+            0.625
+        ],
+        "violation_metric": 0.12747548783981957,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will a plant-based meat alternative become more popular than traditional meat in a major fast-food chain by 2045?",
+            "Will global greenhouse gas emissions decrease by 30% compared to 2020 levels by 2045?",
+            "Conditional on a plant-based meat alternative becoming more popular than traditional meat in a major fast-food chain by 2045, will global greenhouse gas emissions decrease by 30% compared to 2020 levels by the same time?",
+            "Conditional on global greenhouse gas emissions decreasing by 30% compared to 2020 levels by 2045, will a plant-based meat alternative become more popular than traditional meat in a major fast-food chain by the same time?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.40",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.40",
+                "[Answer] 0.25",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.25"
+            ],
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.60",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.6,
+                0.6,
+                0.65,
+                0.6,
+                0.65,
+                0.6
+            ],
+            [
+                0.35,
+                0.4,
+                0.35,
+                0.35,
+                0.35,
+                0.35
+            ],
+            [
+                0.35,
+                0.4,
+                0.25,
+                0.35,
+                0.35,
+                0.25
+            ],
+            [
+                0.65,
+                0.65,
+                0.65,
+                0.6,
+                0.65,
+                0.65
+            ]
+        ],
+        "median": [
+            0.6,
+            0.35,
+            0.35,
+            0.65
+        ],
+        "violation_metric": 0.51720402163943,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will global CO2 emissions be reduced by 30% from 2020 levels by 2040?",
+            "Will the global average temperature increase by less than 1.5°C compared to pre-industrial levels by 2040?",
+            "Conditional on global CO2 emissions being reduced by 30% from 2020 levels by 2040, will the global average temperature increase by less than 1.5°C compared to pre-industrial levels during the same period?",
+            "Conditional on the global average temperature increasing by less than 1.5°C compared to pre-industrial levels by 2040, will global CO2 emissions be reduced by 30% from 2020 levels during the same period?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.35",
+                "[Answer] 0.40",
+                "[Answer] 0.35",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.30",
+                "[Answer] 0.35",
+                "[Answer] 0.45"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.30",
+                "[Answer] 0.25",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ],
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.45",
+                "[Answer] 0.40"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.4,
+                0.35,
+                0.4,
+                0.35,
+                0.5,
+                0.5
+            ],
+            [
+                0.35,
+                0.35,
+                0.35,
+                0.3,
+                0.35,
+                0.45
+            ],
+            [
+                0.35,
+                0.35,
+                0.3,
+                0.25,
+                0.35,
+                0.35
+            ],
+            [
+                0.4,
+                0.4,
+                0.4,
+                0.4,
+                0.45,
+                0.4
+            ]
+        ],
+        "median": [
+            0.4,
+            0.35,
+            0.35,
+            0.4
+        ],
+        "violation_metric": 0.19364916731037096,
+        "strong": false
+    }
+]

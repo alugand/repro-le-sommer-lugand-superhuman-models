@@ -1,0 +1,482 @@
+[
+    {
+        "questions": [
+            "Will a federal law imposing disbursement requirements on donor-advised fund accounts pass in the United States before 2031?",
+            "Will the United States enact a federal law mandating disbursement obligations for donor-advised fund accounts prior to 2031?",
+            "Before 2031, will the United States implement a federal law that establishes disbursement rules for donor-advised fund accounts?",
+            "Will a federal legislation be passed in the United States, setting disbursement stipulations on donor-advised fund accounts, before the year 2031?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.40"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ],
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.40"
+            ],
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.45",
+                "[Answer] 0.40"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.4,
+                0.4,
+                0.4
+            ],
+            [
+                0.35,
+                0.35,
+                0.35
+            ],
+            [
+                0.4,
+                0.4,
+                0.4
+            ],
+            [
+                0.4,
+                0.45,
+                0.4
+            ]
+        ],
+        "violation_metric": 0.050000000000000044,
+        "median": [
+            0.4,
+            0.35,
+            0.4,
+            0.4
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "If there are >100 nuclear detonations by 2050, will average global cereal yields be at least 5% lower in the following 5 years than in the previous 5 years?",
+            "In the event of over 100 nuclear explosions occurring by 2050, will the average worldwide cereal production experience a minimum 5% decline in the subsequent 5 years compared to the prior 5 years?",
+            "Should more than 100 nuclear blasts take place by 2050, will there be a drop of at least 5% in the average global cereal output in the next 5 years relative to the preceding 5 years?",
+            "Given that more than 100 nuclear detonations transpire by 2050, will the following 5 years see a reduction of 5% or more in average cereal yields across the globe compared to the 5 years prior?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.70",
+                "[Answer] Unable to provide a probability estimate due to the lack of scientific data on the specific impact of nuclear detonations on global cereal yields.",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.85",
+                "[Answer] 0.85",
+                "[Answer] 0.85"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate. This scenario involves complex variables including the scale and location of nuclear detonations, prevailing wind patterns, the response of different cereal crops to nuclear fallout, and advances in agricultural technology.",
+                "[Answer] Unable to provide a probability estimate. This scenario involves complex variables including the scale and location of nuclear detonations, prevailing wind patterns, the response of different cereal crops to nuclear fallout, and potential advancements in agricultural technology.",
+                "[Answer] Unable to provide a probability estimate. This scenario involves complex variables including the scale and location of nuclear detonations, prevailing wind patterns, the response of different cereal crops to nuclear fallout, and the potential for human intervention to mitigate impacts."
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.7,
+                null,
+                0.7
+            ],
+            [
+                0.85,
+                0.85,
+                0.85
+            ],
+            [
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                null,
+                null,
+                null
+            ]
+        ],
+        "violation_metric": 0.15000000000000002,
+        "median": [
+            0.7,
+            0.85,
+            0.7,
+            null
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Before Janury 1 2035, will any human live without the assistance of medical life support for at least 100 days after the implantation of a lab-grown heart, liver (or a substantial part of the liver), kidney or lung?",
+            "Will any individual, prior to January 1, 2035, survive for a minimum of 100 days without medical life support after receiving an implanted lab-grown heart, liver (or a significant portion of it), kidney, or lung?",
+            "Prior to January 1, 2035, will there be a person who can sustain their life for at least 100 days after having a lab-grown heart, liver (or a large part of it), kidney, or lung implanted without the help of medical life support?",
+            "By January 1, 2035, will a human be able to survive unaided by medical life support for a minimum of 100 days after having a lab-created heart, liver (or a considerable part of it), kidney, or lung inserted into their body?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ],
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ],
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ],
+            [
+                "[Answer] 0.65",
+                "[Answer] 0.65",
+                "[Answer] 0.65"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.65,
+                0.65,
+                0.65
+            ],
+            [
+                0.65,
+                0.65,
+                0.65
+            ],
+            [
+                0.65,
+                0.65,
+                0.65
+            ],
+            [
+                0.65,
+                0.65,
+                0.65
+            ]
+        ],
+        "violation_metric": 0.0,
+        "median": [
+            0.65,
+            0.65,
+            0.65,
+            0.65
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will the use of whips be banned on or before the 2026 Melbourne Cup thoroughbred horse race?",
+            "Will whips be prohibited on or prior to the 2026 Melbourne Cup thoroughbred horse race?",
+            "Will the employment of whips be disallowed by or during the 2026 Melbourne Cup thoroughbred horse race?",
+            "Will the utilization of whips be banned at or preceding the 2026 Melbourne Cup thoroughbred horse race?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.40",
+                "[Answer] 0.40",
+                "[Answer] 0.40"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] Unable to provide a probability estimate as it depends on future decisions by the racing authorities which are unpredictable.",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate. The decision to disallow the use of whips in horse racing is subject to changes in regulations and policies, which cannot be predicted with certainty.",
+                "[Answer] Unable to provide a probability estimate. The decision to disallow the use of whips in the Melbourne Cup thoroughbred horse race is dependent on future regulations and policies, which are unpredictable.",
+                "[Answer] Unable to provide a probability estimate as it depends on future decisions by the racing authorities, which can't be predicted with certainty."
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] Unable to provide a probability estimate as it depends on future decisions by the regulatory bodies of horse racing in Australia.",
+                "[Answer] Unknown"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.4,
+                0.4,
+                0.4
+            ],
+            [
+                0.5,
+                null,
+                0.5
+            ],
+            [
+                null,
+                null,
+                null
+            ],
+            [
+                0.5,
+                null,
+                null
+            ]
+        ],
+        "violation_metric": 0.09999999999999998,
+        "median": [
+            0.4,
+            0.5,
+            null,
+            0.5
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "If there's a 10% global agricultural shortfall by 2030, will this cause >400 million fatalities?",
+            "If a 10% worldwide agricultural deficit occurs by 2030, will it lead to more than 400 million deaths?",
+            "In the event of a 10% global agricultural decline by 2030, will over 400 million fatalities result?",
+            "Should a 10% reduction in global agriculture happen by 2030, will it cause more than 400 million fatalities?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.30",
+                "[Answer] 0.30",
+                "[Answer] 0.30"
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate. This question involves complex variables such as global food distribution, population growth, and advancements in agricultural technology, which cannot be accurately predicted.",
+                "[Answer] Unable to provide a probability estimate. This question involves complex variables such as global response, technological advancements, and changes in food distribution and consumption, which cannot be accurately predicted.",
+                "[Answer] Unable to provide a probability estimate. This question involves complex variables such as global food distribution, population growth, advancements in agricultural technology, and international aid responses, which cannot be accurately predicted."
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate. The impact of a global agricultural decline on fatalities would depend on a multitude of factors, including the response of governments and international organizations, advancements in technology, and changes in food consumption and distribution. It's not possible to provide a single probability estimate based on the information given.",
+                "[Answer] Unable to provide a probability estimate. This question involves complex variables such as global response, technological advancements, and other unpredictable factors.",
+                "[Answer] Unable to provide a probability estimate. The impact of a global agricultural decline on fatalities would depend on a variety of factors, including the response of governments and international organizations, advances in technology, and changes in dietary habits."
+            ],
+            [
+                "[Answer] 0.01",
+                "[Answer] 0.01",
+                "[Answer] 0.01"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.3,
+                0.3,
+                0.3
+            ],
+            [
+                null,
+                null,
+                null
+            ],
+            [
+                null,
+                null,
+                null
+            ],
+            [
+                0.01,
+                0.01,
+                0.01
+            ]
+        ],
+        "violation_metric": 0.29,
+        "median": [
+            0.3,
+            null,
+            null,
+            0.01
+        ],
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will there be at least one fatality from an offensive nuclear detonation in Russia by 2030, if there's an offensive detonation anywhere by then?",
+            "If an offensive nuclear explosion occurs anywhere before 2030, will it result in a minimum of one death in Russia?",
+            "In the event of an offensive nuclear detonation taking place by 2030, will Russia experience a loss of at least one life as a consequence?",
+            "Assuming an offensive nuclear detonation happens somewhere by 2030, will this lead to a minimum of one fatality in Russia due to the explosion?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate due to the speculative and complex nature of the scenario.",
+                "[Answer] Unable to provide a probability estimate. This scenario involves many unpredictable factors such as the location and scale of the explosion, wind patterns, and Russia's preparedness and response.",
+                "[Answer] Unable to provide a probability estimate due to the speculative and complex nature of the scenario."
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate. This question involves speculative and sensitive topics that are dependent on numerous unpredictable factors.",
+                "[Answer] Unable to provide a probability estimate. This scenario involves unpredictable geopolitical events and human decisions.",
+                "[Answer] Unable to provide a probability estimate due to the speculative and sensitive nature of the question."
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.5,
+                0.7,
+                0.7
+            ],
+            [
+                null,
+                null,
+                null
+            ],
+            [
+                null,
+                null,
+                null
+            ],
+            [
+                0.5,
+                0.5,
+                0.5
+            ]
+        ],
+        "violation_metric": 0.19999999999999996,
+        "median": [
+            0.7,
+            null,
+            null,
+            0.5
+        ],
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will there be at least one fatality from an offensive nuclear detonation in Pakistan by 2030, if there's an offensive detonation anywhere by then?",
+            "If an offensive nuclear detonation occurs anywhere by 2030, will Pakistan experience a minimum of one fatality due to such an event?",
+            "Will at least one fatality result from an offensive nuclear blast in Pakistan by 2030, provided an offensive detonation takes place anywhere during that time frame?",
+            "Assuming an offensive nuclear detonation happens anywhere by 2030, will Pakistan witness at least one fatality as a consequence of this event?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate due to the speculative nature of the question and the lack of specific data.",
+                "[Answer] Unable to provide a probability estimate. This scenario involves many unpredictable factors such as the location of the detonation, wind patterns, political decisions, and more.",
+                "[Answer] Unable to provide a probability estimate. This scenario involves many unpredictable factors such as the location of the detonation, wind patterns, political decisions, and more."
+            ],
+            [
+                "[Answer] 0.99",
+                "[Answer] 0.99",
+                "[Answer] 0.99"
+            ],
+            [
+                "[Answer] Unable to provide a probability estimate. This scenario involves many unpredictable factors such as the location of the detonation, wind patterns, the response of international communities, and more.",
+                "[Answer] Unable to provide a probability estimate. This scenario involves many unpredictable factors such as the location of the detonation, wind patterns, the response of international communities, and more.",
+                "[Answer] Unable to provide a probability estimate. This scenario involves many unpredictable factors such as the location of the detonation, wind patterns, political responses, and more."
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                null,
+                null,
+                null
+            ],
+            [
+                0.99,
+                0.99,
+                0.99
+            ],
+            [
+                null,
+                null,
+                null
+            ]
+        ],
+        "violation_metric": 0.29000000000000004,
+        "median": [
+            0.7,
+            null,
+            0.99,
+            null
+        ],
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will the United States Environmental Protection Agency pass a PFAS Maximum Contaminant Level rule for all municipal water systems in the United States by January 1, 2030?",
+            "By January 1, 2030, will the United States Environmental Protection Agency establish a PFAS Maximum Contaminant Level regulation for every municipal water system in the country?",
+            "Will a PFAS Maximum Contaminant Level regulation be implemented for all US municipal water systems by the United States Environmental Protection Agency before January 1, 2030?",
+            "Will all municipal water systems in the United States be subject to a PFAS Maximum Contaminant Level rule instituted by the Environmental Protection Agency by January 1, 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ],
+            [
+                "[Answer] 0.50",
+                "[Answer] 0.50",
+                "[Answer] 0.50"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.35,
+                0.35,
+                0.35
+            ],
+            [
+                0.5,
+                0.5,
+                0.5
+            ],
+            [
+                0.5,
+                0.5,
+                0.5
+            ]
+        ],
+        "violation_metric": 0.25,
+        "median": [
+            0.6,
+            0.35,
+            0.5,
+            0.5
+        ],
+        "strong": true
+    }
+]

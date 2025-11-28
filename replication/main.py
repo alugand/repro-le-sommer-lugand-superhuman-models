@@ -256,7 +256,7 @@ def run_monotonicity_experiment(questions: List[Tuple[str, str]],
                 p_ab = gpt_query(model_name=model_name, temperature=temperature, prompt=q3, system_prompt=system_prompt)
                 p_ba = gpt_query(model_name=model_name, temperature=temperature, prompt=q4, system_prompt=system_prompt)
                 p = gpt_query(model_name=model_name, temperature=temperature, prompt=q5, system_prompt=system_prompt)
-                
+                print(p)
                 ans1.append(p_a)
                 ans2.append(p_b)
                 ans3.append(p_ab)

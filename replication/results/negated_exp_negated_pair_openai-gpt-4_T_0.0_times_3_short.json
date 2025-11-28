@@ -1,0 +1,254 @@
+[
+    {
+        "questions": [
+            "Will a coordinated effort at foot voting intentionally move 10,000+ residents to a single American state by 2030?",
+            "Will a coordinated effort at foot voting not intentionally move 10,000+ residents to a single American state by 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.05,
+                0.05,
+                0.05
+            ],
+            [
+                0.7,
+                0.7,
+                0.7
+            ]
+        ],
+        "median": [
+            0.05,
+            0.7
+        ],
+        "violation_metric": 0.25,
+        "strong": true
+    },
+    {
+        "questions": [
+            "Will at least one US state secede from the Union before 31 December, 2030?",
+            "Will no US state secede from the Union before 31 December, 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.02",
+                "[Answer] 0.02",
+                "[Answer] 0.02"
+            ],
+            [
+                "[Answer] 0.95",
+                "[Answer] 0.95",
+                "[Answer] 0.95"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.02,
+                0.02,
+                0.02
+            ],
+            [
+                0.95,
+                0.95,
+                0.95
+            ]
+        ],
+        "median": [
+            0.02,
+            0.95
+        ],
+        "violation_metric": 0.030000000000000027,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will California carry through with Governor Newsom's plan to sell only zero-emission electric cars and passenger trucks by 2035?",
+            "Will California not carry through with Governor Newsom's plan to sell only zero-emission electric cars and passenger trucks by 2035?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ],
+            [
+                "[Answer] 0.30",
+                "[Answer] 0.30",
+                "[Answer] 0.30"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.7,
+                0.7,
+                0.7
+            ],
+            [
+                0.3,
+                0.3,
+                0.3
+            ]
+        ],
+        "median": [
+            0.7,
+            0.3
+        ],
+        "violation_metric": 5.551115123125783e-17,
+        "strong": false
+    },
+    {
+        "questions": [
+            "By 2050, will there be fewer than 400 public 4-year colleges in the US?",
+            "By 2050, will there be 400 or more public 4-year colleges in the US?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.35",
+                "[Answer] 0.35",
+                "[Answer] 0.35"
+            ],
+            [
+                "[Answer] 0.70",
+                "[Answer] 0.70",
+                "[Answer] 0.70"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.35,
+                0.35,
+                0.35
+            ],
+            [
+                0.7,
+                0.7,
+                0.7
+            ]
+        ],
+        "median": [
+            0.35,
+            0.7
+        ],
+        "violation_metric": 0.04999999999999993,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will Bill Gates implant a brain-computer interface in anyone by 2030?",
+            "Will Bill Gates not implant a brain-computer interface in anyone by 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.05",
+                "[Answer] 0.05",
+                "[Answer] 0.05"
+            ],
+            [
+                "[Answer] 0.95",
+                "[Answer] 0.95",
+                "[Answer] 0.95"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.05,
+                0.05,
+                0.05
+            ],
+            [
+                0.95,
+                0.95,
+                0.95
+            ]
+        ],
+        "median": [
+            0.05,
+            0.95
+        ],
+        "violation_metric": 0.0,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will Ukraine join the Union State before 2040?",
+            "Will Ukraine not join the Union State before 2040?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.10",
+                "[Answer] 0.10",
+                "[Answer] 0.10"
+            ],
+            [
+                "[Answer] 0.85",
+                "[Answer] 0.85",
+                "[Answer] 0.85"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.1,
+                0.1,
+                0.1
+            ],
+            [
+                0.85,
+                0.85,
+                0.85
+            ]
+        ],
+        "median": [
+            0.1,
+            0.85
+        ],
+        "violation_metric": 0.050000000000000044,
+        "strong": false
+    },
+    {
+        "questions": [
+            "Will a human made spaceship enter the Venusian atmosphere before 2030?",
+            "Will no human made spaceship enter the Venusian atmosphere before 2030?"
+        ],
+        "answers": [
+            [
+                "[Answer] 0.60",
+                "[Answer] 0.60",
+                "[Answer] 0.60"
+            ],
+            [
+                "[Answer] 0.30",
+                "[Answer] 0.40",
+                "[Answer] 0.30"
+            ]
+        ],
+        "extracted_results": [
+            [
+                0.6,
+                0.6,
+                0.6
+            ],
+            [
+                0.3,
+                0.4,
+                0.3
+            ]
+        ],
+        "median": [
+            0.6,
+            0.3
+        ],
+        "violation_metric": 0.10000000000000003,
+        "strong": false
+    }
+]
