@@ -1,0 +1,8 @@
+Type d’expérience,Modèle LLM,Nb exp par questions,Température,Format de Réponse (indiqué dans le prompt)
+Changement modèle,deepseek/deepseek-chat-v3.1,3,0.0,long
+,meta-llama/llama-3.1-8b-instruct,3,0.0,long
+,anthropic/claude-3-haiku,3,0.0,long
+Changement temperature,gpt-4,6,0.8,long
+,gpt-4,6,0.3,long
+Format de réponse,gpt-4,3,0.0,short
+,gpt-4,6,0.5,short
